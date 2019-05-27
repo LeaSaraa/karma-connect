@@ -52,4 +52,5 @@ create_table "users", force: :cascade do |t|
   end
 
   add_foreign_key "posts", "users"
+  add_foreign_key "users", "neighbourhoods"
 end
