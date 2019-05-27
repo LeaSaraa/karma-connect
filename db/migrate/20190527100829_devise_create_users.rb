@@ -3,6 +3,14 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
+      ## fields added for karma connect
+      t.integer :karma_points
+      t.string :first_name
+      t.string :last_name
+      t.string :email
+      t.string :upload_avatar
+      t.string :personal_info
+      t.references :neighbourhood, foreign_key: true
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
