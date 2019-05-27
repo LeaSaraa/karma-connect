@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.4)), url(<%= image_path 'front-image.jpg'%>);">
+
+  <div class="upper-page">
+    <h2>KARMA CONNECT</h2>
+    <div id="gimmick">better together</div>
+  </div>
+
+<div class="lower-page">
+  <div id="description">
+    <p>  Give your Karma a boost by helping others in your neighbourhood </p>
+  </div>
+
+  <div>
+  <a class="btn-homepage" href="<%#= posts_path %>">Let's get started !</a>
+  </div>
+</div>
+</div>
+
+
+<% @homepage = true %>
+  <div class="container">
+
+<!-- File.open(Rails.root.join('db/fixtures/princesses/alice_avatar.jpeg')) -->
+    <!-- url(/assets/background.jpg); -->
+
+
+    <!-- <div><a href="<%#= posts_path %>">Let's go</a></div> -->
+  </div>
+</div>
