@@ -1,7 +1,7 @@
 <div class="container">
 
   <div
-  id="map"
+  id="map" class="info-window"
   style="width: 100%;
   height: 300px;"
   data-markers="<%= @markers.to_json %>"
@@ -26,7 +26,7 @@
   <div class="post-card">
     <div class="post-card-top">
       <div class="post-avatar">
-        <%= cl_image_tag post.user.upload_avatar, crop: :fill, class: 'avatar-square' %>
+        <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
       </div>
       <div class="post-header">
         <div class="post-title">

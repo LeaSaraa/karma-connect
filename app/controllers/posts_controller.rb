@@ -11,14 +11,15 @@ class PostsController < ApplicationController
       @posts = Post.all
     end
 
-#     @posts = Post.where.not(latitude: nil, longitude: nil)
+    @posts = @posts.where.not(latitude: nil, longitude: nil)
+    # @posts = Post.where.not(latitude: nil, longitude: nil)
 
-#     @markers = @posts.map do |post|
-#       {
-#         lat: post.latitude,
-#         lng: post.longitude,
-#         infoWindow: render_to_string(partial: "infowindow", locals: { post: post })
-#       }
-#     end
+    @markers = @posts.map do |post|
+      {
+        lat: post.latitude,
+        lng: post.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { post: post })
+      }
+    end
   end
 end
