@@ -11,12 +11,16 @@
 
   </head>
   <body class="site">
-    <%= render 'shared/navbar'  unless @homepage = true %>
+    <div>
+    <%= render 'shared/navbar' unless @homepage == true %>
+    </div>
     <%= render 'shared/flashes' %>
     <div class="site-content">
-    <%= yield %>
+      <%= yield %>
     </div>
-    <%= render 'shared/footer' %>
+    <div>
+    <%= render 'shared/footer' unless @homepage == true %>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

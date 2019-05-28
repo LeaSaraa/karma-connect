@@ -1,0 +1,30 @@
+.footer {
+  // flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #EF7E3C;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  color: white;
+  a {
+    color: white;
+  }
+}
+.posts-logo {
+  font-size: 22px;
+}
+
+.conversations-logo {
+  font-size: 25px;
+}
+
+.add-post-logo {
+  font-size: 24px;
+}
+
+.user-logo {
+  font-size: 22px;
+}
