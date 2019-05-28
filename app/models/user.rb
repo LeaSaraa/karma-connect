@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :neighbourhood
+  belongs_to :neighbourhood, optional: true
   has_many :posts
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
