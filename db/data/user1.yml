@@ -1,0 +1,30 @@
+
+# 1.yml
+
+#user
+first_name: "Lars"
+last_name: "Böhm"
+email: "lars.Bohm@gmail.com"
+upload avatar: "0"
+personal_info: "0"
+
+# neighborhood
+neighborhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "0"
+    title: "0"
+    description: "0"
+    pictures: "0"
+  - address: "1"
+    title: "1"
+    description: "1"
+    pictures: "1"
+
+comments:
+  - content: "hello"
+  - content: "goodbye"
