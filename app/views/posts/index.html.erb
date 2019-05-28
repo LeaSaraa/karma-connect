@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div
+  id="map"
+  style="width: 100%;
+  height: 300px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+
+
+  <div class="row mt-4 mb-3">
+    <div class="col">
+      <%= form_tag posts_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Search a post"
+        %>
+        <% end %>
+    </div>
+  </div>
+
+    <% @posts.each do |post| %>
+
+  <div class="post-card">
+    <div class="post-card-top">
+      <div class="post-avatar">
+        <%= cl_image_tag post.user.avatar, crop: :fill, class: 'avatar-square' %>
+      </div>
+      <div class="post-header">
+        <div class="post-title">
+          <%= post.title %>
+        </div>
+        <div class="post-small">
+          by <%= post.user.first_name %>
+          <% elapsed_time = Time.now - post.created_at %>
+          - posted
+            <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+            <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+            <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+            <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+            <% else %>
+            <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+          <!-- <%#= Time.at(elapsed_time).utc.strftime("%k h %Mmn") %> ago -->
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="post-card-content">
+      <div class="post-content">
+      <%= post.description %>
+      </div>
+      <div class="post-small">
+       - <%= post.category %> -
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
