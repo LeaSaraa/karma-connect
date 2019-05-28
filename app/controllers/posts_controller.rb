@@ -8,7 +8,17 @@ class PostsController < ApplicationController
       "
       @posts = Post.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     else
-    @posts = Post.all
+      @posts = Post.all
     end
+
+#     @posts = Post.where.not(latitude: nil, longitude: nil)
+
+#     @markers = @posts.map do |post|
+#       {
+#         lat: post.latitude,
+#         lng: post.longitude,
+#         infoWindow: render_to_string(partial: "infowindow", locals: { post: post })
+#       }
+#     end
   end
 end
