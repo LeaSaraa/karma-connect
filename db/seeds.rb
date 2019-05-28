@@ -1,3 +1,8 @@
+
+Neighbourhood.destroy_all
+User.destroy_all
+Post.destroy_all
+
 # Guerrique's seeds-----------------------------------------------------------
 #uncomment if want to use
 # puts 'clearing data'
@@ -5,8 +10,6 @@
 # Post.destroy_all
 # User.destroy_all
 # Neighbourhood.destroy_all
-
-
 
 # puts 'creating neighbourhood'
 # depijp = Neighbourhood.create!(name: 'De Pijp')
@@ -47,30 +50,52 @@
 
 # Lea's seeds-------------------------------------------
 
+neighbourhoods = ["Amsterdam", "Oud-Zuid", "De Pijp", "Rivierenbuurt", "Buitenveldert", "Zuidas"]
 
-neighborhoods = ["Amsterdam", "Oud-Zuid", "De Pijp", "Rivierenbuurt", "Buitenveldert", "Zuidas"]
-
-neighborhoods.each do |name|
-  # Neighborhood.create(name: name)
-  puts name
+puts "CREATING NEIGHBOURHOODS"
+neighbourhoods.each do |name|
+  Neighbourhood.create(name: name)
 end
 
-  [1, 2].each do |item|
-  user = YAML.load_file("db/data/user#{item}.yml")
-  p user["first_name"]
-    p user["last_name"]
+puts "STARTING USER DATA SET CREATION"
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].each do |item|
+	user_data = YAML.load_file("db/data/user#{item}.yml")
 
-  user["posts"].each do |post|
-  	p post["description"]
-  end
-  # User.new(
-  #   first_name: user[:first_name],
-  #   last_name: user[:last_name],
-  #   email: user[:email],
-  #   upload_avatar: user[:upload_avatar],
-  #   personal_info: user[:personal_info],
-  #   neighborhood: Neighborhood.find_by_name(user[:neighborhood]
-  #   )
-  #   user.save
-  end
+puts "CREATING USER"
+	user = User.new(
+		first_name: user_data["first_name"],
+		password: "hello#{rand(1..1000)}",
+		last_name: user_data["last_name"],
+		email: user_data["email"],
+		personal_info: user_data["personal_info"],
+		neighbourhood: Neighbourhood.find_by_name(user_data["neighbourhood"])
+	)
+	user.remote_upload_avatar_url = user_data["upload_avatar"]
+	user.save!
 
+puts "CREATING POSTS"
+	user_data["posts"].each do |post_data|
+	  post = Post.new(
+	    title: post_data["title"],
+	    address: post_data["address"],
+	    description: post_data["description"],
+	    picture: post_data["picture"],
+	    user: user
+	    )
+		post.save!
+
+		unless post_data["compliments"].nil?
+			puts "CREATING COMPLIMENTS"
+			post_data["compliments"].each do |compliment_data|
+			  compliment = Compliment.new(
+				text: compliment_data["text"],
+				points: compliment_data["points"].to_i,
+				user: (User.all.shuffle - [user]).first,
+				post: post
+				)
+			  	post.remote_picture_url = post_data["picture"]
+				compliment.save!
+			end
+		end
+	end
+end

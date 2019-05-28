@@ -1,0 +1,29 @@
+#user
+first_name: "Johan"
+last_name: "Asher"
+email: "Johan_ash@hotmail.com"
+upload_avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+personal_info: "Not relevant"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Van Woustraat 15, 1074 AA Amsterdam"
+    title: "Borrow a ladder"
+    description: "Does someone have a ladder that I can borrow? "
+    pictures: "0"
+    compliments:
+    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
+      points: "5"
+  - address: "Ceintuurbaan 85, 1072 LS, Amsterdam"
+    title: "I am looking for a drilling machine that I can borrow"
+    description: "Can I borrow someones drilling machine upcoming saturday?"
+    pictures: "1"
+    compliments:
+    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
+      points: "5"
