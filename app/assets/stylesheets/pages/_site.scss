@@ -1,0 +1,14 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.site {
+  background-color: #fff8CD;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}

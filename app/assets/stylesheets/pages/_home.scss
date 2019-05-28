@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 15vh 10px;
+  height: 100vh;
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    color: #EF7E3C;
+  }
+}
+
+#gimmick {
+  color: #ef7e3cb0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.upper-page {
+  flex-grow: 2;
+}
+
+.lower-page {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#description {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  padding: 0 20px;
+}

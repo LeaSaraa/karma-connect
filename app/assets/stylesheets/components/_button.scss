@@ -1,0 +1,17 @@
+.btn-homepage {
+  // border: 0.5px solid #EF7E3C;
+  border-radius: 3px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  background-color: #EF7E3C;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.6;
+    color: white;
+  }
+}

@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_100646) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+create_table "users", force: :cascade do |t|
     t.integer "karma_points"
     t.string "first_name"
     t.string "last_name"
