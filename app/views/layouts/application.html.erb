@@ -19,7 +19,7 @@
       <%= yield %>
     </div>
     <div>
-    <%= render 'shared/footer' %>
+    <%= render 'shared/footer' unless @homepage == true %>
     </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
