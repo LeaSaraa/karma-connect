@@ -1,11 +1,11 @@
 # Guerrique's seeds-----------------------------------------------------------
 #uncomment if want to use
-# puts 'clearing data'
+puts 'clearing data'
 
-# Neighbourhood.destroy_all
-# User.destroy_all
-# Post.destroy_all
-# # Comment.destroy_all
+Neighbourhood.destroy_all
+User.destroy_all
+Post.destroy_all
+# Comment.destroy_all
 
 
 
@@ -15,16 +15,16 @@
 # puts 'creating users'
 # julia = User.create!(first_name: 'Julia', last_name: 'Jonker', email: "julia@karma.com",
 #   password: "julia!", neighbourhood_id: depijp.id,
-#   avatar: File.open(Rails.root.join('db/fixtures/julia.jpg')))
+#   upload_avatar: File.open(Rails.root.join('db/fixtures/julia.jpg')))
 # norman = User.create!(first_name: 'Norman', last_name: 'Hennis', email: "norman@karma.com",
 #   password: "norman!", neighbourhood_id: depijp.id,
-#   avatar: File.open(Rails.root.join('db/fixtures/norman.jpg')))
+#   upload_avatar: File.open(Rails.root.join('db/fixtures/norman.jpg')))
 # patrick = User.create!(first_name: 'Patrick', last_name: 'Stellinga', email: "patrick@karma.com",
 #   password: "patrick!", neighbourhood_id: depijp.id,
-#   avatar: File.open(Rails.root.join('db/fixtures/patrick.jpg')))
+#   upload_avatar: File.open(Rails.root.join('db/fixtures/patrick.jpg')))
 # susan = User.create!(first_name: 'Susan', last_name: 'Roosen', email: "susan@karma.com",
 #   password: "susan!", neighbourhood_id: depijp.id,
-#   avatar: File.open(Rails.root.join('db/fixtures/susan.jpg')))
+#   upload_avatar: File.open(Rails.root.join('db/fixtures/susan.jpg')))
 
 # puts 'creating posts'
 # post_1 = Post.create!(title: 'I would like some help with my garden', description: 'Hello wonderful neighbours,
