@@ -1,0 +1,22 @@
+#user
+first_name: "Hans"
+last_name: "Veenstra"
+email: "hans.veenstra@gmail.com"
+upload_avatar: "https://i.pinimg.com/280x280_RS/33/4f/e7/334fe707b69235073f6b69a3c4757652.jpg"
+personal_info: "I have a lot of tools available if someone needs to borrow something. I would be happy to help other with odd jobs"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Ferdinand Bolstraat 87, 1072 LD Amsterdam"
+    title: "Can someone bring me something?"
+    description: "Is there someone who can is going to Ikea soon and can bring me something small?"
+    pictures: "0"
+    compliments:
+    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
+      points: "5"

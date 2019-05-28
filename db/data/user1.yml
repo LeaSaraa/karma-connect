@@ -1,0 +1,25 @@
+#user
+first_name: "Lars"
+last_name: "Böhm"
+email: "lars.Bohm@gmail.com"
+upload_avatar: "https://engineering.unl.edu/images/staff/Kayla_Person-small.jpg"
+personal_info: "I love cooking and gardning"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Ceintuurbaan 85, 1072 LS, Amsterdam"
+    title: "Borrow a ladder"
+    description: "Does someone have a ladder that I can borrow? "
+    pictures: "https://images.homedepot-static.com/productImages/1dae08ad-4da5-4f78-b8c0-c0c84b7521bf/svn/louisville-ladder-step-ladders-fm1506-64_1000.jpg"
+    compliments:
+  - address: "Ceintuurbaan 85, 1072 LS, Amsterdam"
+    title: "I am looking for a drilling machine that I can borrow"
+    description: "Can I borrow someones drilling machine upcoming saturday?"
+    pictures: "https://4.imimg.com/data4/HQ/II/MY-16368276/drilling-machine-500x500.jpg"
+    compliments:

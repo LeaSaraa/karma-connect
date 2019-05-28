@@ -1,0 +1,20 @@
+# 1.yml
+first_name: "Natalie"
+last_name: "Van Kreef"
+email: "Van_kreef@gmail.com"
+upload_avatar: "https://images.pexels.com/photos/2325612/pexels-photo-2325612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+personal_info: "I am new to this neighborhood and would like to meet new people by helping out"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Stadhouderskade 101D, 1073 AW Amsterdam"
+    title: "Watching my cat"
+    description: "I am going away for the weekend and was hoping that someone in this neighborhood could watch my cat Felix? He is really easy and sweet!"
+    pictures: "https://upload.wikimedia.org/wikipedia/commons/6/66/An_up-close_picture_of_a_curious_male_domestic_shorthair_tabby_cat.jpg"
+    compliments:
