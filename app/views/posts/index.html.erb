@@ -1,0 +1,12 @@
+<div class="container">
+
+  <% @posts.each do |post| %>
+  <strong><h2><%= post.title %></h2></strong>
+  <div>
+    <%= post.description %>
+  </div>
+  <div>
+    <p> <%= Time.now %></p>
+  </div>
+  <% end %>
+</div>
