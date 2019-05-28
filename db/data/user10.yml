@@ -1,0 +1,27 @@
+#user
+first_name: "Anna-marie"
+last_name: "Bergman"
+email: "am-bergman@hotmail.com"
+upload_avatar: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+personal_info: "Hello, my name is Anna and I love animals and cooking. Looking forward to help others!"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Gerard Doustraat 71, 1072 VM Amsterdam"
+    title: "Pick up packages from the post office"
+    description: "Hello, I broke my leg and am cannot go outside. I wanted to see if there is someone who can help me with picking up a package from the postoffice and someone to bring me my mail too."
+    pictures: "0"
+    compliments:
+    - text: "She was very helpful and very nice to know. Anna helped me by getting something from the Ikea the other day and after she dropped it off we had a nice cup of tea together."
+      points: "5"
+  - address: "Gerard Doustraat 71, 1072 VM Amsterdam"
+    title: "Can someone bring a specific plant for me from the home depot?"
+    description: "Hello, I do not have a car unfortunately and was wondering if I could join someone who will go to the home depot anytime soon"
+    pictures: "1"
+    compliments:
