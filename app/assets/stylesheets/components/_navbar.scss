@@ -1,12 +1,13 @@
-.navbar-lewagon {
+.navbar-karma {
+  display: flex;
+  align-items: baseline;
   justify-content: space-between;
-  background: white;
+  background: #EF7E3C;
+  height: 6vh;
+  padding: 0 10px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.karma {
+  color: white;
+  font-weight: 700;
 }
