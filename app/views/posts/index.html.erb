@@ -1,0 +1,32 @@
+<div class="container">
+<div
+  id="map"
+  style="width: 100%;
+  height: 300px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
+
+  <div class="row mt-4 mb-3">
+    <div class="col">
+  <%= form_tag posts_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search a post"
+  %>
+<% end %>
+</div>
+</div>
+
+  <% @posts.each do |post| %>
+  <strong><h2><%= post.title %></h2></strong>
+  <div>
+    <%= post.description %>
+  </div>
+  <div>
+    <p> <%= Time.now %></p>
+  </div>
+  <% end %>
+</div>
