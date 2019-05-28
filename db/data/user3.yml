@@ -1,0 +1,30 @@
+#user
+first_name: "Leila"
+last_name: "Yavuz"
+email: "leila_yavuz@hotmail.com"
+upload_avatar: "https://www.pexels.com/photo/women-s-white-and-black-button-up-collared-shirt-774909/"
+personal_info: "I am a single mother who loves to take her dog and kid for walks in the neighborhood"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Van Woustraat 130, 1073 LT Amsterdam"
+    title: "Can someone walk my dog again?"
+    description: "My 10 month old baby is sick and I need to take care of her. However, my dog Barky really needs to go for a walk. Someone would like to take him for a walk?"
+    pictures: "0"
+    compliments:
+  - address: "Van Woustraat 130, 1073 LT Amsterdam"
+    title: "Can someone bring me something from the Supermarket?"
+    description: "I know it's late but is someone able to bring me diapers from the Supermarket? My baby is already in bed and I just noticed that I have no more diapers."
+    pictures: "0"
+    compliments:
+  - address: "Van Woustraat 130, 1073 LT Amsterdam"
+    title: "Is there anyone that can help me with fixing a lamp?"
+    description: "Is there someone handy that can help me with this quick fix?"
+    pictures: "0"
+    compliments:

@@ -1,30 +1,22 @@
-
-# 1.yml
-
 #user
-first_name: "Lars"
-last_name: "Böhm"
-email: "lars.Bohm@gmail.com"
-upload avatar: "0"
-personal_info: "0"
+first_name: "Hans"
+last_name: "Veenstra"
+email: "hans.veenstra@gmail.com"
+upload_avatar: "https://i.pinimg.com/280x280_RS/33/4f/e7/334fe707b69235073f6b69a3c4757652.jpg"
+personal_info: "I have a lot of tools available if someone needs to borrow something. I would be happy to help other with odd jobs"
 
 # neighborhood
-neighborhood: "De Pijp"
+neighbourhood: "De Pijp"
 
 # conversations
 messages: "0"
 
 #posts
 posts:
-  - address: "0"
-    title: "0"
-    description: "0"
+  - address: "Ferdinand Bolstraat 87, 1072 LD Amsterdam"
+    title: "Can someone bring me something?"
+    description: "Is there someone who can is going to Ikea soon and can bring me something small?"
     pictures: "0"
-  - address: "1"
-    title: "1"
-    description: "1"
-    pictures: "1"
-
-comments:
-  - content: "hello"
-  - content: "goodbye"
+    compliments:
+    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
+      points: "5"
