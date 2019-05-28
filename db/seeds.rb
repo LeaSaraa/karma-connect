@@ -1,10 +1,10 @@
 # Guerrique's seeds-----------------------------------------------------------
 #uncomment if want to use
-puts 'clearing data'
+# puts 'clearing data'
 
-Neighbourhood.destroy_all
-User.destroy_all
-Post.destroy_all
+# Neighbourhood.destroy_all
+# User.destroy_all
+# Post.destroy_all
 # Comment.destroy_all
 
 
