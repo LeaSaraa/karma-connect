@@ -1,6 +1,6 @@
-<%#= link_to post_path(post) do %>
-<div class="post-card">
-  <div class="info-window">
+    <% @posts.each do |post| %>
+
+  <div class="post-card">
     <div class="post-card-top">
       <div class="post-avatar">
         <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
@@ -33,7 +33,4 @@
       </div>
     </div>
   </div>
-</div>
-<%# end %>
-
-
+  <% end %>
