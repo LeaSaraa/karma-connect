@@ -1,0 +1,24 @@
+.userpage {
+}
+
+.userpage-avatar {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.userpage-username {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(87,87,87);
+}
+
+.userpage-neighbourhood {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: rgba(87,87,87,0.6);
+}
