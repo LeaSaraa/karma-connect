@@ -1,5 +1,5 @@
     <% @posts.each do |post| %>
-
+<%= link_to post_path(post) do %>
   <div class="post-card">
     <div class="post-card-top">
       <div class="post-avatar">
@@ -33,4 +33,5 @@
       </div>
     </div>
   </div>
+  <% end %>
   <% end %>
