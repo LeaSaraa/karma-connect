@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-center">
+     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <h2>What would you like help with</h2>
+      <%= simple_form_for @post, url: my_posts_path do |f| %>
+       <%= f.input :title, label: false, placeholder: "Post title" %>
+      <%= f.input :category, label: false, collection: ['Gardening','Need a ride', 'Odd jobs', 'Pet sitting', 'Chores', 'Others'], prompt: "Select a category" %>
+      <%= f.input :address, label: false, placeholder: "Where ?"%>
+      <%= f.input :description, as: :text, label: 'Your message', placeholder: "Write your post here!" %>
+      <%= f.submit 'Preview',  class: "btn btn-warning" %>
+      <%= f.button :submit, class: "btn btn-warning" %>
+
+    <% end %>
+
+    </div>
+  </div>
+</div>

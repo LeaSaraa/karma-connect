@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:index]
 
-  resources :my_posts , except: [:destroy]
+  resources :my_posts , only: [:new, :create]
 
 
   end
