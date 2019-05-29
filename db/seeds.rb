@@ -69,6 +69,7 @@ puts "CREATING USER"
 		last_name: user_data["last_name"],
 		email: user_data["email"],
 		personal_info: user_data["personal_info"],
+    karma_points: user_data["karma_points"],
 		neighbourhood: Neighbourhood.find_by_name(user_data["neighbourhood"])
 	)
 	user.remote_upload_avatar_url = user_data["upload_avatar"]

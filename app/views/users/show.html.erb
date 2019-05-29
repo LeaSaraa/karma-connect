@@ -6,9 +6,17 @@
     <div class="userpage-username">
       <%= @user.first_name %> <%= @user.last_name %>
     </div>
-        <div class="userpage-neighbourhood">
+    <div class="userpage-neighbourhood">
       <%= @user.neighbourhood.name %>
     </div>
+    <div class="userpage-karma-points">
+      You have <%= @user.karma_points %> karma points !
+    </div>
+    <div class="userpage-links">
+      <a href="<%= user_path(current_user) %>">Manage my posts</a>
+      <a href="<%= user_path(current_user) %>">Edit my profile</a>
+    </div>
+
   </div>
 </div>
 
