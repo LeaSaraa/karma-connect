@@ -64,7 +64,8 @@ puts "STARTING USER DATA SET CREATION"
 puts "CREATING USER"
 	user = User.new(
 		first_name: user_data["first_name"],
-		password: "hello#{rand(1..1000)}",
+    password: "hello!",
+		# password: "hello#{rand(1..1000)}",
 		last_name: user_data["last_name"],
 		email: user_data["email"],
 		personal_info: user_data["personal_info"],
