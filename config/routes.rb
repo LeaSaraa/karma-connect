@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:index]
 
-  resources :my_posts , only: [:new, :create]
+  resources :my_posts , only: [:new, :create, :index]
 
 
   end
