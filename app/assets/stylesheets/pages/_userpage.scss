@@ -4,8 +4,8 @@
 .userpage-avatar {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .userpage-username {
@@ -13,12 +13,13 @@
   justify-content: center;
   font-size: 30px;
   font-weight: 700;
-  color: rgb(87,87,87);
+  color: $title;
+  margin-bottom: 20px;
 }
 
 .userpage-neighbourhood {
   display: flex;
   justify-content: center;
   font-size: 16px;
-  color: rgba(87,87,87,0.6);
+  color: $superlight;
 }

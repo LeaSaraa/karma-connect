@@ -1,15 +1,30 @@
-<h1><%= @user.upload_avatar %></h1>
-<h1><%= @user.first_name %></h1>
-<h1><%= @user.last_name %></h1>
-<h1><%= @user.email %></h1>
-<h1><%= @user.neighbourhood %></h1>
+<div class="container">
+  <div class="userpage">
+    <div class="userpage-avatar">
+      <%= cl_image_tag @user.upload_avatar, crop: :thumb, gravity: :face, width: 120, height: 120, class: 'avatar-large' %>
+    </div>
+    <div class="userpage-username">
+      <%= @user.first_name %> <%= @user.last_name %>
+    </div>
+        <div class="userpage-neighbourhood">
+      <%= @user.neighbourhood.name %>
+    </div>
+  </div>
+</div>
 
 
-<%= simple_form_for @user do |f| %>
-<%= f.input :first_name, label: 'Your username please', error: 'Username is mandatory, please specify one' %>
-<%= f.input :last_name %>
-<%= f.input :email, placeholder: 'user@domain.com' %>
-<%= f.input :upload_avatar %>
-<%= f.input :neighbourhood %>
-<%= f.button :submit %>
-<% end %>
+
+
+
+
+
+
+
+<%#= simple_form_for @user do |f| %>
+<%#= f.input :first_name, label: 'Your username please', error: 'Username is mandatory, please specify one' %>
+<%#= f.input :last_name %>
+<%#= f.input :email, placeholder: 'user@domain.com' %>
+<%#= f.input :upload_avatar %>
+<%#= f.input :neighbourhood %>
+<%#= f.button :submit %>
+<%# end %>
