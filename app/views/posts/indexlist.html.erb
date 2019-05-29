@@ -1,6 +1,28 @@
-<%#= link_to post_path(post) do %>
-<div class="post-card">
-  <div class="info-window">
+<div class="container">
+  <div class="button-display">
+    <div class="button-display-list"><a href="#">List</a></div> /
+    <div class="button-display-map"><a href="#">Map</a></div>
+  </div>
+
+  <!-- <div class="row"> -->
+      <!-- <div> -->
+  <div class="search-bar">
+    <div>
+      <%= form_tag posts_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control form-control-sm search-layout",
+        placeholder: "Search a post"
+        %>
+        <% end %>
+    </div>
+  </div>
+    <!-- </div> -->
+  <!-- </div> -->
+
+    <% @posts.each do |post| %>
+
+  <div class="post-card">
     <div class="post-card-top">
       <div class="post-avatar">
         <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
@@ -33,7 +55,5 @@
       </div>
     </div>
   </div>
+  <% end %>
 </div>
-<%# end %>
-
-
