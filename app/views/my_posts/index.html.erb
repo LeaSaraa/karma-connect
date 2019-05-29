@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>My posts</h1>
+  <% if current_user.posts.present? %>
+  <% current_user.posts.each do |post| %>
+    <div class="card">
+      <%= post.title %>
+
+  <div>
+  <% elapsed_time = Time.now - post.created_at %>
+</div>
+    <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+    <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+    <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+    <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+    <% else %>
+    <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+      <% end %>
+    <% end %>
+
+  <% end %>
+  </div>
+</div>
