@@ -9,5 +9,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :upload_avatar, PhotoUploader
 
-  validates :first_name, :last_name, :email, :upload_avatar, :personal_info, presence: true
+  # validates :first_name, :last_name, :email, :upload_avatar, :personal_info, presence: true
 end
