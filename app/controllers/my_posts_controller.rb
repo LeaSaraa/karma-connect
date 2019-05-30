@@ -1,17 +1,14 @@
 class MyPostsController < ApplicationController
-  def index
-    # if @user == current_user
-      @posts = Post.all
-    # end
-  end
-
+  before_action :set_post, only: [:active, :done]
   def new
     @post = Post.new
   end
 
   def create
+    @user = User.find(params[:user_id])
     @post = Post.new(post_params)
     @post.user = current_user
+    @post.status = "active"
       if @post.save
         flash[:notice] = 'Post has been saved.'
         redirect_to posts_path
@@ -20,9 +17,31 @@ class MyPostsController < ApplicationController
       end
   end
 
+  def index
+    # if @user == current_user
+    @posts = Post.all
+    # end
+  end
+
+  def active
+    @post.status = 'Active'
+    @post.save
+    redirect_to my_posts_path
+  end
+
+  def done
+    @post.status = 'Done'
+    @post.save
+    redirect_to posts_path
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :category, :address, :description)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end

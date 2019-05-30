@@ -3,8 +3,7 @@
   <% if current_user.posts.present? %>
   <% current_user.posts.each do |post| %>
     <div class="card">
-      <%= post.title %>
-
+      <%= post.title %> <%= post.status %>
   <div>
   <% elapsed_time = Time.now - post.created_at %>
 </div>
@@ -15,6 +14,19 @@
     <% else %>
     <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
       <% end %>
+    <%= post.status %>
+
+    <% if post.status == 'Active' %>
+        <div class='btn btn-light'>
+          <%= link_to 'Done', done_my_post_path(post), method: :patch %>
+          </div>
+     <% elsif post.status == 'Done' %>
+
+
+      <div class='btn btn-warning'>
+         <%= link_to 'Active', active_my_post_path(post), method: :patch %>
+        </div>
+        <% end %>
     <% end %>
 
   <% end %>
