@@ -1,34 +1,111 @@
 <div class="container">
-  <h1>My posts</h1>
-  <% if current_user.posts.present? %>
-  <% current_user.posts.each do |post| %>
-    <div class="card">
-      <%= post.title %> <%= post.status %>
-  <div>
-  <% elapsed_time = Time.now - post.created_at %>
-</div>
-    <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
-    <%= Time.at(elapsed_time).utc.strftime("%e days") %>
-    <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
-    <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
-    <% else %>
-    <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
-      <% end %>
-    <%= post.status %>
+  <div class="title">
+    <h4>My posts</h4>
+  </div>
 
-    <% if post.status == 'Active' %>
-        <div class='btn btn-light'>
-          <%= link_to 'Done', done_my_post_path(post), method: :patch %>
+
+    <% if current_user.posts.present? %>
+      <% current_user.posts.each do |post| %>
+      <div class="post-card">
+        <div class="my-post-container">
+          <div>
+            <div class="post-title">
+              <%= post.title.truncate_words(4) %>
+            </div>
+            <div class="post-small">
+              <% elapsed_time = Time.now - post.created_at %>
+              <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+              <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+              <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+              <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+              <% else %>
+              <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+              <% end %>
+            </div>
           </div>
-     <% elsif post.status == 'Done' %>
+          <div>
+
+<% if post.status == 'Active' %>
+
+<!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary btn-karma" data-toggle="modal" data-target="#Mymodal">
+            Active !
+          </button>
+
+<!-- .modal -->
+          <div class="modal fade" id="Mymodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+<!--                   <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                  </button> -->
+                  <h4 class="title">
+                    <%= post.title %>
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  <div class='btn-karma'>
+                    <%= link_to 'Mark as done !', done_my_post_path(post), method: :patch %>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Close
+                  </button>
+<!--                   <button type="button" class="btn btn-primary">
+                            Ok
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+<% elsif post.status == 'Done' %>
+            <div class="my-post-done">
+            <%= post.status %>
+            </div>
+            <% end %>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
 
 
-      <div class='btn btn-warning'>
-         <%= link_to 'Active', active_my_post_path(post), method: :patch %>
+
+        <!--     <%# if post.status == 'Active' %>
+              <div class='btn-karma'>
+                <%#= link_to 'Active !', done_my_post_path(post), method: :patch %>
+              </div>
+            <%# elsif post.status == 'Done' %>
+            <div class="my-post-done">
+            <%#= post.status %>
+            </div>
+            <%# end %> -->
+
+          </div>
         </div>
-        <% end %>
-    <% end %>
 
-  <% end %>
+
+
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
