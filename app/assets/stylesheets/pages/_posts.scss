@@ -1,0 +1,17 @@
+.button-area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-display {
+  font-size: 14px;
+  padding: 0 6px;
+  a {
+  color: rgb(87,87,87);
+  border-radius: 5px;
+  }
+  a:hover {
+    color: rgba(87,87,87,0.4);
+    text-decoration: none;
+  }
+}
