@@ -25,13 +25,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-
-    @markers =
-      [{
-        lat: @post.latitude,
-        lng: @post.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { post: @post })
-      }]
+    @comments = @post.comments.all
+    @comment = @post.comments.build
   end
-
 end

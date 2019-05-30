@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def edit
     redirect_to user_path(@user)
-     render "show"
+    render "show"
   end
 
   private
