@@ -5,10 +5,10 @@ class MyPostsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    # @user = current_user
     @post = Post.new(post_params)
     @post.user = current_user
-    @post.status = "active"
+    @post.status = "Active"
       if @post.save
         flash[:notice] = 'Post has been saved.'
         redirect_to posts_path
@@ -19,7 +19,7 @@ class MyPostsController < ApplicationController
 
   def index
     # if @user == current_user
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
     # end
   end
 
@@ -32,7 +32,7 @@ class MyPostsController < ApplicationController
   def done
     @post.status = 'Done'
     @post.save
-    redirect_to posts_path
+    redirect_to my_posts_path
   end
 
   private

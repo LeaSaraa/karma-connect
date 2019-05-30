@@ -1,36 +1,38 @@
 <% @posts.each do |post| %>
-<div class="post-card">
-<%= link_to post_path(post) do %>
-  <div class="post-card-top">
-    <div class="post-avatar">
-      <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
+<% if post.status == "Active" %>
+  <div class="post-card">
+  <%= link_to post_path(post) do %>
+    <div class="post-card-top">
+      <div class="post-avatar">
+        <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
+      </div>
+      <div class="post-header">
+        <div class="post-title">
+          <%= post.title %>
+        </div>
+        <div class="post-small">
+          by <%= post.user.first_name %>
+          <% elapsed_time = Time.now - post.created_at %>
+          - posted
+          <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+          <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+          <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+          <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+          <% else %>
+          <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="post-header">
-      <div class="post-title">
-        <%= post.title %>
+    <div class="post-card-content">
+      <div class="post-content">
+        <%= post.description %>
       </div>
       <div class="post-small">
-        by <%= post.user.first_name %>
-        <% elapsed_time = Time.now - post.created_at %>
-        - posted
-        <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
-        <%= Time.at(elapsed_time).utc.strftime("%e days") %>
-        <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
-        <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
-        <% else %>
-        <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="post-card-content">
-    <div class="post-content">
-      <%= post.description %>
-    </div>
-    <div class="post-small">
-     - <%= post.category %> -
+       - <%= post.category %> -
+     </div>
    </div>
- </div>
-</div>
+  </div>
+  <% end %>
 <% end %>
 <% end %>

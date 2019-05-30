@@ -8,7 +8,7 @@ class PostsController < ApplicationController
       "
       @posts = Post.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     else
-      @posts = Post.all
+      @posts = Post.all.order("created_at DESC")
     end
 
     @posts = @posts.where.not(latitude: nil, longitude: nil)
