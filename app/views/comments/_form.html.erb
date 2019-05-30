@@ -1,0 +1,16 @@
+<div class="comment-form-wrapper">
+<%= simple_form_for [@post, @comment] do |f| %>
+  <%= f.input :body, label: false, placeholder: "Reply" %>
+  <!-- <div style="
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #f49d4e;
+    font-size: 20px;
+    border: 2px solid orange;
+    padding: 5px 25px;
+"> -->
+  <%= f.submit "Post" %>
+<% end %>
+<!-- </div> -->
+</div>
