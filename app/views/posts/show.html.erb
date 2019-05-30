@@ -35,8 +35,18 @@
           - <%= @post.category %> -
         </div>
 
-        <div class="static-map"><%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{@post.longitude},#{@post.latitude},15.62,0,0/300x100?access_token=pk.eyJ1IjoibG9sYWZhZ2FkZSIsImEiOiJjanc3bmNxNWYwYm1xNGNvNzJhNnFxbHZ1In0.bfpgszPNPtaHpEFOWhYEfg&logo=false" %>
-        </div>
+
+<!-- ------trying map--------- -->
+        <div
+  id="map" class="info-window post-map"
+  style="width: 100%; height: 100px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  >
+</div>
+
+<!-- ----------end of try -->
+
         <div>
          Space for the comment form
        </div>

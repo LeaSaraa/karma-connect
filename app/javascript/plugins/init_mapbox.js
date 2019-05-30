@@ -9,7 +9,7 @@ const buildMap = () => {
   const mapBoxMap = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lolafagade/cjw7qkzoq08aq1cmw0f7bsq49',
-center: [2.317600, 48.866500],
+center: [4.895380, 52.355020],
 zoom: 12.0
   });
   window.mapBoxMap = mapBoxMap;
@@ -29,7 +29,7 @@ const addMarkersToMap = (map, markers) => {
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-  map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+  map.fitBounds(bounds, { padding: 40, maxZoom: 13 });
 };
 
 const initMapbox = () => {
@@ -41,5 +41,7 @@ const initMapbox = () => {
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
   }
 };
+
+
 
 export { initMapbox };
