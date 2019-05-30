@@ -11,7 +11,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.post = Post.find(params[:post_id])
-    @comment.save
+    @comment.save if
+      respond_to do |format|
+        format.html { redirect_to posts_path(@post_id) }
+        format.js
+      end
   end
 
   private

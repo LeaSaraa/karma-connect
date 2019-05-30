@@ -1,0 +1,8 @@
+function refreshForm(innerHTML) {
+  const newCommentForm = document.getElementById('comment');
+  newCommentForm.innerHTML = innerHTML;
+}
+
+<% if @review.errors.any? %>
+refreshForm('<%= j render "comments/form", post: @post, comment: Comment.new %>');
+<% end %>

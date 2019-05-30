@@ -1,4 +1,6 @@
+<div>
 <%= simple_form_for [@post, @comment] do |f| %>
   <%= f.input :body, label: false, placeholder: "Reply" %>
   <%= f.submit "Post" %>
 <% end %>
+</div>
