@@ -3,7 +3,7 @@
   <% if current_user.posts.present? %>
   <% current_user.posts.each do |post| %>
     <div class="card">
-      <%= post.title %>
+      <%= post.title %> <%= post.status %>
   <div>
   <% elapsed_time = Time.now - post.created_at %>
 </div>

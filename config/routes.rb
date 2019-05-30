@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :posts, only: [:index]
   resources :my_posts , only: [:new, :create, :index]
   resources :users, only: [:show, :update, :edit]
+  resources :posts_status, only: [:new, :create]
+
 end
