@@ -38,7 +38,13 @@
         <div class="static-map"><%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{@post.longitude},#{@post.latitude},15.62,0,0/300x100?access_token=pk.eyJ1IjoibG9sYWZhZ2FkZSIsImEiOiJjanc3bmNxNWYwYm1xNGNvNzJhNnFxbHZ1In0.bfpgszPNPtaHpEFOWhYEfg&logo=false" %>
         </div>
         <div>
-         Space for the comment form
+        <h3>View replies</h3>
+        <% @comments.each do |comment| %>
+       <div>
+       <p><%= comment.body %></p>
+      </div>
+      <% end %>
+       <%= render partial: 'comments/form', locals: { comment: @comment } %>
        </div>
 
      </div>
