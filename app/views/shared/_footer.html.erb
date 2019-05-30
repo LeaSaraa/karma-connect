@@ -6,7 +6,9 @@
     <a href="#"><i class="far fa-comments"></i></a>
   </div>
   <div class="add-post-logo">
-    <a href="my_posts/new"><i class="far fa-plus-square"></i></a>
+    <%= link_to new_my_post_path do %>
+    <i class="far fa-plus-square"></i>
+    <% end %>
   </div>
   <div class="user-logo">
     <% if user_signed_in? %>
