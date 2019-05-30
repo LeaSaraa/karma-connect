@@ -18,30 +18,31 @@
 }
 
 .post-header {
-  margin-left: 5px;
+  margin: 0 8px;
   text-align: left;
 }
 
 .post-title {
   line-height: 18px;
-  color: rgb(87,87,87);
+  color: $title;
   margin-bottom: 5px;
 }
 
 .post-small {
-  color: rgba(87,87,87,0.6);
+  color: $superlight;
+  // color: rgba(87,87,87,0.6);
   font-size: 12px;
 }
 
 .post-card-content {
   padding-top: 8px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
 
 }
 
 .post-content {
   line-height: 22px;
-  color: rgba(87,87,87,0.8);
+  color: $normal;
   margin-bottom: 5px;
 }

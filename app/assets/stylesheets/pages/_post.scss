@@ -1,0 +1,32 @@
+.post-page-content {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  padding: 15px 5px;
+  color: $normal;
+}
+
+.title {
+  h4 {
+
+  font-size: 24px;
+  }
+  display: flex;
+  justify-content: center;
+  color: $title;
+  // margin-bottom: 20px;
+}
+
+.post-creation-form {
+  width: 100%;
+}
+
+textarea.form-control {
+    height: 230px;
+}
+
+.post-creation-buttons {
+  display: flex;
+  justify-content: flex-end;
+}

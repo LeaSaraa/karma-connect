@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :posts, only: [:index]
+
+  resources :posts, only: [:index, :show]
   resources :users, only: [:show, :update, :edit]
-  resources :posts_status, only: [:new, :create]
   resources :my_posts , only: [:new, :create, :index] do
     member do
       patch :active
@@ -12,4 +12,4 @@ Rails.application.routes.draw do
     end
   end
 
-end
+ 

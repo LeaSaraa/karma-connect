@@ -9,6 +9,10 @@
     <a href="my_posts/new"><i class="far fa-plus-square"></i></a>
   </div>
   <div class="user-logo">
+    <% if user_signed_in? %>
+    <a href="<%= user_path(current_user) %>"><i class="far fa-user"></i></a>
+    <% else %>
     <a href="#"><i class="far fa-user"></i></a>
+    <% end %>
   </div>
 </div>
