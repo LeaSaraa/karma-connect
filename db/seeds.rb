@@ -1,10 +1,10 @@
 
 Message.destroy_all
 Chatroom.destroy_all
-User.destroy_all
-Neighbourhood.destroy_all
 Comment.destroy_all
 Post.destroy_all
+User.destroy_all
+Neighbourhood.destroy_all
 
 # Guerrique's seeds-----------------------------------------------------------
 #uncomment if want to use
