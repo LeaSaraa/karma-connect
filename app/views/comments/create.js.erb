@@ -6,10 +6,6 @@ function refreshForm(innerHTML) {
 function addComment(commentHTML) {
   const comments = document.getElementById('comments');
   comments.insertAdjacentHTML('beforeend', commentHTML);
-
-
-
-  // comments.insertAdjacentHTML('afterend', commentHTML);
 }
 
 <% if @comment.errors.any? %>
