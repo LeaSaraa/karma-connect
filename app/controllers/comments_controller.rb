@@ -10,19 +10,21 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.post = Post.find(params[:post_id])
+    @post =  Post.find(params[:post_id])
+    @comment.post = @post
     if @comment.save
-      redirect_to post_path(@comment.post)
-      flash[:notice] = "Succesfully saved comment!"
+      respond_to do |format|
+        format.html { redirect_to post_path(@comment.post) }
+        format.js
+        flash[:notice] = "Succesfully saved comment!"
+      end
     else
-      render :new
-      flash[:alert] = "Something went wrong, please try again"
+      respond_to do |format|
+        format.html { render :new }
+        format.js
+        flash[:alert] = "Something went wrong, please try again"
+      end
     end
-    # if
-    #   respond_to do |format|
-    #     format.html { redirect_to posts_path(@post_id) }
-    #     format.js
-    #   end
   end
 
   private
