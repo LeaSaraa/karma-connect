@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   resources :my_posts , only: [:new, :create, :index]
   resources :users, only: [:show, :update, :edit]
 
+ # Serve websocket cable requests in-process
+  mount ActionCable.server => '/cable'
+
+  resources :chatrooms
+  resources :messages
 end
