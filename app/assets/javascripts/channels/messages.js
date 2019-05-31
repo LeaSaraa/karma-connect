@@ -13,7 +13,20 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
     received: function (data) {
       // Called when there's incoming data on the websocket for this channel. You could put plain jQuery into here to replace a div with html, for example.
       document.querySelector('#messages').classList.remove('hidden')
-      return document.querySelector('#messages').insertAdjacentHTML('beforeend', "<p> <b>" + data.user + ": </b>" + data.message + "</p>");
+      let content = `
+      <div class="message-container">
+            <div class="avatar-wrapper">
+              <img class="message-avatar" src="http://placehold.it/100/100">
+              <p>
+                ${data.user}
+              </p>
+            </div>
+            <div class="message-text-balloon">
+              ${data.message}
+            </div>
+          </div>
+          `
+      return document.querySelector('#messages').insertAdjacentHTML('beforeend', content);
 
     }
 });

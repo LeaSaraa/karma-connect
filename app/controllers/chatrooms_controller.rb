@@ -2,6 +2,7 @@ class ChatroomsController < ApplicationController
   def show
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
+    @the_other = (current_user == @chatroom.sender) ? @chatroom.receiver : @chatroom.sender
   end
 
   def index
