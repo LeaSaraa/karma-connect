@@ -13,7 +13,6 @@ Rails.application.routes.draw do
       patch :done
     end
   end
- end
 
 
  # Serve websocket cable requests in-process

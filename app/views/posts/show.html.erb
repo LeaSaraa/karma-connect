@@ -63,9 +63,11 @@
        </div>
 
        <div>
-<%= link_to new_chatroom_path do %>
-    <div class= "btn-karma">Start a private conversation</div>
-<% end %>
+<%= simple_form_for @chatroom, url: chatrooms_path do |f| %>
+<%= f.input :receiver_id, input_html: { value: @post.user.id }, as: :hidden  %>
+<%= f.input :topic, input_html: { value: @post.title }, as: :hidden %>
+<%= f.submit "Start a private conversation", class: "btn-karma" %>
+  <% end %>
        </div>
  </div>
    </div>

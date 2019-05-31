@@ -7,7 +7,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   mount_uploader :upload_avatar, PhotoUploader
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_many :chatrooms, through: :messages
   # validates :first_name, presence: true, uniqueness: true
   # validates :first_name, :last_name, :email, :upload_avatar, :personal_info, presence: true
