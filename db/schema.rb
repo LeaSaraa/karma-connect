@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_181445) do
     t.datetime "updated_at", null: false
     t.integer "sender_id"
     t.integer "receiver_id"
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
