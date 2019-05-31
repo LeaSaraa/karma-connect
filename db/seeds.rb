@@ -1,6 +1,8 @@
 
-Neighbourhood.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
+Neighbourhood.destroy_all
 Comment.destroy_all
 Post.destroy_all
 
