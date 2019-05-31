@@ -1,9 +1,5 @@
-<h1>Chatrooms#show</h1>
-<p>Find me in app/views/chatrooms/show.html.erb</p>
-
 <div class="row col-md-8 col-md-offset-2">
-  <h1><%= @chatroom.topic %></h1>
-
+  <h5><%= @chatroom.topic %></h5>
 <div class="panel panel-default">
   <% if @chatroom.messages.any? %>
     <div class="panel-body" id="messages">
@@ -14,6 +10,5 @@
     </div>
   <%end%>
 </div>
-
   <%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom}%>
 </div>

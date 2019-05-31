@@ -16,7 +16,6 @@ class ChatroomsController < ApplicationController
   def create
     first_try = Chatroom.where(sender_id: current_user.id, receiver_id: params[:chatroom][:receiver_id]).first
     second_try = Chatroom.where(sender_id: params[:chatroom][:receiver_id], receiver_id: current_user.id).first
-
     if first_try
       redirect_to chatroom_path(first_try)
     elsif second_try
