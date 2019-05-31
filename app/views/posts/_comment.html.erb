@@ -1,0 +1,19 @@
+<div class="comment">
+  <div class="comment-content">
+    <%= comment.body %>
+  </div>
+  <div class="comment-small">
+    by <%= comment.user.first_name %>
+    <% elapsed_time = Time.now - comment.created_at %>
+    -
+    <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+    <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+    <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+    <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+    <% elsif Time.at(elapsed_time).utc.strftime("%M").to_i < 1 %>
+    just now
+    <% else %>
+    <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+    <% end %>
+  </div>
+</div>

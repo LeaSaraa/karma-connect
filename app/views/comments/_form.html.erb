@@ -1,7 +1,7 @@
 <div class="comment-form-wrapper">
 <%= simple_form_for([ post, comment ], remote: true) do |f| %>
-  <%= f.input :body, label: false, placeholder: "Reply" %>
-  <%= f.submit "Post" %>
+  <%= f.input :body, label: false, placeholder: "Your reply" %>
+  <%= f.submit "Post", class: 'comment-button' %>
 <% end %>
 <!-- </div> -->
 <!-- <div style="

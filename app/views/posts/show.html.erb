@@ -5,9 +5,11 @@
 
 
       <div class="post-card-top">
+        <%= link_to user_path(@post.user) do %>
         <div class="post-avatar">
           <%= cl_image_tag @post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
         </div>
+        <% end %>
         <div class="post-header">
           <div class="post-title">
             <%= @post.title %>
@@ -45,20 +47,22 @@
         ></div>
 
       <!-- ----------end of try -->
+      <div class= "btn-karma btn-start-conv">Start a private conversation</div>
+      <%# end %>
+    </div>
 
-          <strong><p>Comments</p></strong>
-          <div id="comments">
-            <% @comments.each do |comment| %>
-             <p><%= comment.body %></p>
-            <% end %>
+          <div class="comment-title">Comments</div>
+            <div id="comments">
+              <% @comments.each do |comment| %>
+                <%= render partial: "posts/comment", locals: { comment: comment } %>
+              <% end %>
+            </div>
           </div>
+
          <div class="new_comment">
             <%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
           </div>
       <%#= link_to %>
-      <div class= "btn-karma">Start a private conversation</div>
-      <%# end %>
-    </div>
 
   </div>
 
