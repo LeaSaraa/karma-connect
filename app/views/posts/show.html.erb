@@ -36,37 +36,35 @@
         </div>
 
 
-<!-- ------trying map--------- -->
+        <!-- ------trying map--------- -->
         <div
-  id="map" class="info-window post-map"
-  style="width: 100%; height: 100px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  >
+        id="map" class="info-window post-map"
+        style="width: 100%; height: 100px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
+
+      <!-- ----------end of try -->
+
+          <strong><p>Comments</p></strong>
+          <div id="comments">
+            <% @comments.each do |comment| %>
+             <p><%= comment.body %></p>
+            <% end %>
+          </div>
+         <div class="new_comment">
+            <%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
+          </div>
+      <%#= link_to %>
+      <div class= "btn-karma">Start a private conversation</div>
+      <%# end %>
+    </div>
+
+  </div>
+
+
+
+
+
 </div>
-
-<!-- ----------end of try -->
-
-        <div>
-        <h3>View replies</h3>
-        <% @comments.each do |comment| %>
-       <div>
-       <p><%= comment.body %></p>
-      </div>
-      <% end %>
-       <%= render partial: 'comments/form', locals: { comment: @comment } %>
-       </div>
-       <div>
-<%#= link_to %>
-    <div class= "btn-karma">Start a private conversation</div>
-<%# end %>
-       </div>
-
-     </div>
-
-
-
-
-
-   </div>
- </div>
+</div>

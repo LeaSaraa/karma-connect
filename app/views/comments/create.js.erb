@@ -1,0 +1,18 @@
+function refreshForm(innerHTML) {
+  const newCommentForm = document.getElementById('new_comment');
+  newCommentForm.innerHTML = innerHTML;
+}
+
+function addComment(commentHTML) {
+  const comments = document.getElementById('comments');
+  comments.insertAdjacentHTML('afterend', commentHTML);
+}
+
+<% if @comment.errors.any? %>
+  console.log('some errors')
+  refreshForm('<%= j render "comments/form", post: @post, comment: @comment %>');
+<% else %>
+  console.log('all good');
+  addComment('<%= j render "posts/show", comment: @comment %>');
+  refreshForm('<%= j render "comments/form", post: @post, comment: Comment.new %>');
+<% end %>
