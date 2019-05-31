@@ -1,6 +1,7 @@
 
 Neighbourhood.destroy_all
 User.destroy_all
+Comment.destroy_all
 Post.destroy_all
 
 # Guerrique's seeds-----------------------------------------------------------

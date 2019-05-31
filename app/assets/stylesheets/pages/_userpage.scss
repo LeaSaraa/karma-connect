@@ -23,13 +23,22 @@
 .userpage-neighbourhood {
   font-size: 17px;
   color: $superlight;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
+}
+
+.userpage-personal-info {
+  font-size: 17px;
+  color: $superlight;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 12px;
 }
 
 .userpage-karma-points {
   font-size: 20px;
   color: $normal;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .userpage-links {
