@@ -7,7 +7,7 @@ body {
   display: flex;
   min-height: 85vh;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
 }
@@ -16,6 +16,8 @@ body {
   // flex: 1;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
