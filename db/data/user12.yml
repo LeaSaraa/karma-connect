@@ -1,0 +1,24 @@
+#user
+first_name: "Lisa"
+last_name: "Kooijman"
+email: "lisa_K@gmail.com"
+upload_avatar: "https://www.hellomagazine.com/imagenes/film/2019051573047/emmerdale-lisa-dingle-real-reason-leaving-revealed/0-355-447/emmerdale-lisa-dingle-dies-t.jpg"
+personal_info: "I work in IT and can offer help to anyone who needs some digital advise"
+karma_points: "29"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
+    title: "Help rearranging my balcony"
+    description: "Hi, I want to rearrange my balcony a little bit. Can someone help me with hanging my flower pots?"
+    compliments:
+    - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
+    title: "Someone is going to the garden center anytime soon?"
+    description: "Hallo, I want to get a bigger plan for my balcony and was wondering if someone with a car can help me get one?"
+    compliments:

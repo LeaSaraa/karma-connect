@@ -1,0 +1,24 @@
+#user
+first_name: "Danny"
+last_name: "Achmatova"
+upload_avatar: "https://www.24baby.nl/wp-content/uploads/2013/03/Jonge-vruchtbare-vrouw-Vruchtbaarheid-vrouw.jpg"
+mail: "danny_A@hotmail.com"
+personal_info: "Can help with a lot of different things"
+karma_points: "50"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Jozef Israëlskade 31, 1072 LH Amsterdam"
+    title: "Someone can take car of my 2 year old beagle called Buddy?"
+    description: "I am going away next week for 2 days and wanted to ask if someone can take care of Buddy? I usually take him to a boarding kennel but he hates it there."
+    pictures: "0"
+  - address: "Jozef Israëlskade 31, 1072 LH Amsterdam"
+    title: "Practice Dutch"
+    description: "I am from Poland originally and I am trying to learn dutch since I moved her 1 year ago. Dutch is a difficult language and I need some help to practice. Does someone wants to help me?"
+    pictures: "0"

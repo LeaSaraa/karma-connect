@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @post =  Post.find(params[:post_id])
     @comment.post = @post
+    @comment.user = current_user
     if @comment.save
       respond_to do |format|
         format.html { redirect_to post_path(@comment.post) }

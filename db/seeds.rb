@@ -1,8 +1,10 @@
 
-Neighbourhood.destroy_all
-User.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 Comment.destroy_all
 Post.destroy_all
+User.destroy_all
+Neighbourhood.destroy_all
 
 # Guerrique's seeds-----------------------------------------------------------
 #uncomment if want to use
@@ -58,8 +60,8 @@ neighbourhoods.each do |name|
   Neighbourhood.create(name: name)
 end
 
-puts "STARTING USER DATA SET CREATION"
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].each do |item|
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].each do |item|
 	user_data = YAML.load_file("db/data/user#{item}.yml")
 
 puts "CREATING USER"
