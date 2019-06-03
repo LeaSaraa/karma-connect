@@ -1,4 +1,4 @@
-
+Compliment.destroy_all
 Message.destroy_all
 Chatroom.destroy_all
 Comment.destroy_all
@@ -105,8 +105,8 @@ puts "CREATING POSTS"
 			  compliment = Compliment.new(
 				text: compliment_data["text"],
 				points: compliment_data["points"].to_i,
-				user: (User.all.shuffle - [user]).first,
-				post: post
+				user: user,
+        sender:(User.all.shuffle - [user]).first
 				)
 			  	post.remote_picture_url = post_data["picture"]
 				compliment.save!
