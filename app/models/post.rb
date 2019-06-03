@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :compliments, dependent: :destroy
   has_many :comments
 
   validates :address, presence: true
