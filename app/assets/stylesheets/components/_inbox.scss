@@ -1,0 +1,36 @@
+
+// .post-card {
+//   box-shadow: 0 0px 2px rgba(0,0,0,0.1);
+//   background-color: white;
+//   margin: 10px 5px;
+//   padding: 10px;
+//   a {
+//     text-decoration: none;
+//   }
+// }
+
+.inbox-message {
+  background-color: white;
+  box-shadow: 0 0px 2px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(150,150,150,0.5);
+  padding-bottom: 8px;
+}
+
+.inbox-avatar {
+  flex-basis: width | auto;
+  margin-right: 5px;
+}
+
+.inbox-header {
+  margin: 0 8px;
+  text-align: left;
+}
+
+.inbox-title {
+  font-size: 18px;
+  line-height: 18px;
+  color: $title;
+  margin-bottom: 5px;
+}

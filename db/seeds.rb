@@ -106,7 +106,7 @@ puts "CREATING POSTS"
 				text: compliment_data["text"],
 				points: compliment_data["points"].to_i,
 				user: user,
-        sender:(User.all.shuffle - [user]).first
+				sender: (User.all.shuffle - [user]).first
 				)
 			  	post.remote_picture_url = post_data["picture"]
 				compliment.save!

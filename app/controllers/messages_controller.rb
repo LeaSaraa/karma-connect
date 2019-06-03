@@ -6,7 +6,8 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast 'messages',
       message: message.content,
-      user: message.user.first_name
+      user: message.user.first_name,
+      url: message.user.upload_avatar.url
       head :ok
     else
       redirect_to chatrooms_path
