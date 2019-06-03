@@ -17,8 +17,10 @@ posts:
   - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
     title: "Help rearranging my balcony"
     description: "Hi, I want to rearrange my balcony a little bit. Can someone help me with hanging my flower pots?"
+    category: "Gardening"
     compliments:
     - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
     title: "Someone is going to the garden center anytime soon?"
     description: "Hallo, I want to get a bigger plan for my balcony and was wondering if someone with a car can help me get one?"
+    category: "Need a ride"
     compliments:
