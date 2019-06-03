@@ -1,10 +1,10 @@
 #user
-first_name: "Betty"
-last_name: "Hansen"
-email: "Mevr.Hansen@gmail.com"
-upload_avatar: "https://images.pexels.com/photos/2050981/pexels-photo-2050981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-personal_info: "I like reading, gardening, and people!."
-karma_points: "100"
+first_name: "Leila"
+last_name: "Yavuz"
+email: "leila_yavuz@hotmail.com"
+upload_avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+personal_info: "I love to take my dog for walks in the neighborhood."
+karma_points: "60"
 
 # neighborhood
 neighbourhood: "De Pijp"
@@ -14,19 +14,21 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
-    title: "Need someone to help me in my garden"
-    description: "Hello, I am looking for someone to help me with trimming a bush. I have all the equipment myself but I am not able to do it alone. It should be sunny on Sunday. Someone can help me?"
-    category: "Gardening"
-    # pictures: "https://volkstuinverhalen.nl/wp-content/uploads/2017/07/14.jpg"
-    compliments:
-    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
-      points: "5"
-  - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
-    title: "Can someone pick me up from the Dentist?"
-    description: "Hi, I need to go to the doctor on Monday 09:00 and will have to get anestesia. I'm a bit afraid and was wondering if someone can pick me up from the Dentist office? "
-    category: "Need a ride"
+  - address: "Van Woustraat 130, 1073 LT Amsterdam"
+    title: "Anybody wants a pet sitter ?"
+    description: "Hey all! I really miss my parent's dogs, so I would love to take care of pets from time to time!"
+    category: "Pet sitting"
+    # pictures: "0"
+    # compliments:
+  # - address: "Van Woustraat 130, 1073 LT Amsterdam"
+  #   title: "Can someone bring me something from the Supermarket?"
+  #   description: "I know it's late but is someone able to bring me diapers from the Supermarket? My baby is already in bed and I just noticed that I have no more diapers."
+  #   pictures: "0"
+  #   compliments:
+  - address: "Van Woustraat 130, 1073 LT Amsterdam"
+    title: "Anyone can help me fixing a lamp?"
+    description: "Is there someone handy that can help me with this quick fix?"
     pictures: "0"
+    category: "Odd jobs"
     compliments:
-    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
-      points: "5"
+      - text: "Very nice!"

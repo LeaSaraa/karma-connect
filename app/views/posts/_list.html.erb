@@ -1,38 +1,42 @@
 <% @posts.each do |post| %>
-<% if post.status == "Active" %>
-  <%= link_to post_path(post) do %>
-  <div class="post-card">
-    <div class="post-card-top">
-      <div class="post-avatar">
-        <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
+  <% if post.status == "Active" %>
+    <%= link_to post_path(post) do %>
+      <div class="post-card" style="background-color: <%= post.category.color %>">
+            <div class="post-empty">
+            </div>
+            <div class="post-full">
+                <div class="post-avatar">
+                  <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 70, height: 70, class: 'avatar-square' %>
+                </div>
+                <div>
+                  <%= image_tag post.category.icon, class: "post-icon" %>
+                </div>
+              <div class="post-card-top">
+                <div class="post-header">
+                  <div class="post-title">
+                    <%= post.title %>
+                  </div>
+                  <div class="post-small">
+                    by <%= post.user.first_name %>
+                    <% elapsed_time = Time.now - post.created_at %>
+                    - posted
+                    <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+                    <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+                    <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+                    <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+                    <% else %>
+                    <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="post-card-content">
+                <div class="post-content">
+                  <%= post.description %>
+                </div>
+             </div>
+            </div>
       </div>
-      <div class="post-header">
-        <div class="post-title">
-          <%= post.title %>
-        </div>
-        <div class="post-small">
-          by <%= post.user.first_name %>
-          <% elapsed_time = Time.now - post.created_at %>
-          - posted
-          <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
-          <%= Time.at(elapsed_time).utc.strftime("%e days") %>
-          <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
-          <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
-          <% else %>
-          <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <div class="post-card-content">
-      <div class="post-content">
-        <%= post.description %>
-      </div>
-      <div class="post-small">
-       - <%= post.category.name %> -
-     </div>
-   </div>
-  </div>
+    <% end %>
   <% end %>
-<% end %>
 <% end %>

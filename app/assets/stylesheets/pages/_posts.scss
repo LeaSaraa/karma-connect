@@ -1,17 +1,149 @@
+.posts-index {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.post-avatar {
+  position: absolute;
+    top: 30px;
+    left: -50px;
+    font-size: 18px;
+    z-index: 5;
+}
+
+.post-icon {
+  position: absolute;
+  top: -6px;
+  left: -60px;
+  height: 25px;
+  width: 25px;
+  z-index: 5;
+}
+
 .button-area {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  padding-top: 3px;
+  width: 100%;
+}
+
+.search-bar {
+  padding-left: 10px;
+  flex-grow: 3;
+}
+
+.form-control-sm {
+  color: rgba(87,87,87,0.4) !important;
+}
+
+.search-layout {
+  border: 0.5px solid rgba(87,87,87,0.2);
+  padding: 5px 5px;
+}
+
+// color of placeholder in seach posts form on posts index page
+.search-layout::placeholder {
+  color: $superlight;
 }
 
 .button-display {
-  font-size: 14px;
-  padding: 0 6px;
-  a {
-  color: rgb(87,87,87);
-  border-radius: 5px;
-  }
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.switch-link {
+  background-color: $orange;
+  color: white;
+    border: 1px solid $orange;
+  font-weight: 700;
+  padding: 5px 20px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+.switch-link:hover {
+  color: $orange;
+  background-color: white;
+  border: 1px solid $orange;
+  text-decoration: none;
+}
+
+#list-view {
   a:hover {
-    color: rgba(87,87,87,0.4);
     text-decoration: none;
   }
 }
+
+.post-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.post-empty {
+  width: 20%;
+}
+
+.post-full {
+  position: relative;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.post-card-top {
+  display: flex;
+  justify-content: center;
+}
+
+// .post-avatar {
+//   flex-basis: width | auto;
+//   margin-right: 5px;
+// }
+
+// .post-header {
+//   margin: 0 8px;
+//   text-align: left;
+// }
+
+.post-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $normal;
+  margin-bottom: 5px;
+}
+
+.post-small {
+  color: $superlight;
+  font-size: 12px;
+}
+
+.post-card-content {
+  padding-top: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+}
+
+.post-content {
+  line-height: 22px;
+  color: $normal;
+  margin-bottom: 5px;
+}
+

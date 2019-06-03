@@ -8,16 +8,14 @@
 
 
 .info-window {
-  border: 0;
-  padding: 0;
+  margin: 0 0 !important;
+  padding: 0 0 !important;
+  display: flex;
+  // width: 100%;
 }
 
 
 .display-none  {
-  // opacity: 0;
-  // z-index: -1;
-  // position: absolute;
-  // height: 0%;
   display: none;
 }
 
@@ -30,7 +28,12 @@
 }
 
 .post-map {
-  margin: 10px 0;
+  // margin: 10px 0;
   // display: flex;
   // justify-content: center;
+}
+
+#map-view {
+  margin: 0;
+  padding: 0;
 }

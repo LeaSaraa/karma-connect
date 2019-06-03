@@ -1,32 +1,32 @@
-<div class="container">
+<div class="container posts-index">
+  <div class="zeromargin">
+    <div class="button-area">
+      <div class="search-bar">
+        <div class="zeromargin">
+          <%= form_tag posts_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control form-control-sm search-layout",
+            placeholder: "Search a post"
+            %>
+            <% end %>
+        </div>
+      </div>
+      <div class="button-display">
+          <a href="#map-view" data-section="#map-view" class="switch-link">Map</a>
+          <a href="#list-view" data-section="#list-view" class="switch-link">List</a>
+      </div>
+    </div>
 
-<div class="button-area">
-  <div class="button-display">
-      <a href="#map-view" data-section="#map-view" class="switch-link">Map</a>
-       / <a href="#list-view" data-section="#list-view" class="switch-link">List</a>
-  </div>
-</div>
 
-  <div class="search-bar">
-    <div>
-      <%= form_tag posts_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control form-control-sm search-layout",
-        placeholder: "Search a post"
-        %>
-        <% end %>
+
+    <div id="list-view" class="sections">
+      <%= render 'list' %>
+    </div>
+    <div id="map-view" class="sections display-none">
+      <%= render 'map' %>
     </div>
   </div>
-
-
-  <div id="list-view" class="sections">
-  <%= render 'list' %>
-  </div>
-  <div id="map-view" class="sections display-none">
-  <%= render 'map' %>
-  </div>
-
 </div>
 
 

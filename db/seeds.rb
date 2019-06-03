@@ -63,14 +63,14 @@ end
 
 categories = ["Gardening","Need a ride", "Odd jobs", "Pet sitting", "Lend a hand", "Others"]
 
-Category.create(name: "Gardening", color: "#72CB9E", icon: "garden.png")
-Category.create(name: "Need a ride", color: "#86BBD8", icon: "ride.png")
-Category.create(name: "Odd jobs", color: "#B5AC92", icon: "odd.png")
-Category.create(name: "Pet sitting", color: "#EE6055", icon: "pet.png")
-Category.create(name: "Lend a hand", color: "#F4D35E", icon: "hand.png")
+Category.create(name: "Gardening", color: "rgba(114,203,158,0.8)", icon: "garden.png")
+Category.create(name: "Need a ride", color: "rgba(134,187,216,0.8)", icon: "ride.png")
+Category.create(name: "Odd jobs", color: "rgba(181,172,146,0.8)", icon: "odd.png")
+Category.create(name: "Pet sitting", color: "rgba(238,96,85,0.8)", icon: "pet.png")
+Category.create(name: "Lend a hand", color: "rgba(244,211,94,0.8)", icon: "hand.png")
 Category.create(name: "Others", color: "#D6D1B1", icon: "others.png")
 
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].each do |item|
+[15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1].each do |item|
 	user_data = YAML.load_file("db/data/user#{item}.yml")
 
 puts "CREATING USER"
