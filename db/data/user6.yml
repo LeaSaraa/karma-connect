@@ -17,13 +17,15 @@ posts:
   - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
     title: "Need someone to help me in my garden"
     description: "Hello, I am looking for someone to help me with trimming a bush. I have all the equipment myself but I am not able to do it alone. It should be sunny on Sunday. Someone can help me?"
-    pictures: "https://volkstuinverhalen.nl/wp-content/uploads/2017/07/14.jpg"
+    category: "Gardening"
+    # pictures: "https://volkstuinverhalen.nl/wp-content/uploads/2017/07/14.jpg"
     compliments:
     - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
       points: "5"
   - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
     title: "Can someone pick me up from the Dentist?"
     description: "Hi, I need to go to the doctor on Monday 09:00 and will have to get anestesia. I'm a bit afraid and was wondering if someone can pick me up from the Dentist office? "
+    category: "Need a ride"
     pictures: "0"
     compliments:
     - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"

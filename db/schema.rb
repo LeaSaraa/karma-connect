@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_03_092804) do
+
+ActiveRecord::Schema.define(version: 2019_06_03_111930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "icon"
+  end
 
   create_table "chatrooms", force: :cascade do |t|
     t.text "topic"
@@ -69,8 +78,9 @@ ActiveRecord::Schema.define(version: 2019_06_03_092804) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
-    t.string "category"
     t.string "status", default: "Active"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -101,6 +111,7 @@ ActiveRecord::Schema.define(version: 2019_06_03_092804) do
   add_foreign_key "compliments", "users", column: "sender_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
   add_foreign_key "users", "neighbourhoods"
 end

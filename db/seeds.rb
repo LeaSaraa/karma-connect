@@ -3,6 +3,7 @@ Message.destroy_all
 Chatroom.destroy_all
 Comment.destroy_all
 Post.destroy_all
+Category.destroy_all
 User.destroy_all
 Neighbourhood.destroy_all
 
@@ -60,8 +61,16 @@ neighbourhoods.each do |name|
   Neighbourhood.create(name: name)
 end
 
+categories = ["Gardening","Need a ride", "Odd jobs", "Pet sitting", "Lend a hand", "Others"]
 
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].each do |item|
+Category.create(name: "Gardening", color: "#72CB9E", icon: "garden.png")
+Category.create(name: "Need a ride", color: "#86BBD8", icon: "ride.png")
+Category.create(name: "Odd jobs", color: "#B5AC92", icon: "odd.png")
+Category.create(name: "Pet sitting", color: "#EE6055", icon: "pet.png")
+Category.create(name: "Lend a hand", color: "#F4D35E", icon: "hand.png")
+Category.create(name: "Others", color: "#D6D1B1", icon: "others.png")
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].each do |item|
 	user_data = YAML.load_file("db/data/user#{item}.yml")
 
 puts "CREATING USER"
@@ -85,7 +94,8 @@ puts "CREATING POSTS"
 	    address: post_data["address"],
 	    description: post_data["description"],
 	    picture: post_data["picture"],
-	    user: user
+	    user: user,
+      category: Category.find_by_name(post_data["category"])
 	    )
 		post.save!
 
