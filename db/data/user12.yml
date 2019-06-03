@@ -1,10 +1,10 @@
 #user
-first_name: "Lisa"
-last_name: "Kooijman"
-email: "lisa_K@gmail.com"
-upload_avatar: "https://www.hellomagazine.com/imagenes/film/2019051573047/emmerdale-lisa-dingle-real-reason-leaving-revealed/0-355-447/emmerdale-lisa-dingle-dies-t.jpg"
-personal_info: "I work in IT and can offer help to anyone who needs some digital advise"
-karma_points: "29"
+first_name: "Lars"
+last_name: "Böhm"
+email: "lars.Bohm@gmail.com"
+upload_avatar: "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+personal_info: "I love cooking and gardening"
+karma_points: "10"
 
 # neighborhood
 neighbourhood: "De Pijp"
@@ -14,13 +14,9 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
-    title: "Help rearranging my balcony"
-    description: "Hi, I want to rearrange my balcony a little bit. Can someone help me with hanging my flower pots?"
-    category: "Gardening"
-    compliments:
-    - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
-    title: "Someone is going to the garden center anytime soon?"
-    description: "Hallo, I want to get a bigger plan for my balcony and was wondering if someone with a car can help me get one?"
-    category: "Need a ride"
+  - address: "Ceintuurbaan 85, 1072 LS, Amsterdam"
+    title: "Borrow a drill"
+    description: "Anyone has a drill I can borrow next saturday ? I can come pick it up and bring it back."
+    category: "Others"
+    # pictures: "https://images.homedepot-static.com/productImages/1dae08ad-4da5-4f78-b8c0-c0c84b7521bf/svn/louisville-ladder-step-ladders-fm1506-64_1000.jpg"
     compliments:

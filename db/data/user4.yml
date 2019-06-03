@@ -19,7 +19,6 @@ posts:
   #   description: "Does someone have a ladder that I can borrow? "
   #   pictures: "0"
   #   compliments:
-  #   - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
   #     points: "5"
   - address: "Ceintuurbaan 85, 1072 LS, Amsterdam"
     title: "I can give math classes"
@@ -27,5 +26,5 @@ posts:
     category: "Lend a hand"
     # pictures: "1"
     compliments:
-    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
-      points: "5"
+    - text: "Thanks a lot for your kindness."
+      # points: "5"

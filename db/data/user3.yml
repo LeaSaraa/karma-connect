@@ -1,10 +1,10 @@
 #user
-first_name: "Leila"
-last_name: "Yavuz"
-email: "leila_yavuz@hotmail.com"
-upload_avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-personal_info: "I love to take my dog for walks in the neighborhood."
-karma_points: "60"
+first_name: "Betty"
+last_name: "Hansen"
+email: "Mevr.Hansen@gmail.com"
+upload_avatar: "https://images.pexels.com/photos/2050981/pexels-photo-2050981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+personal_info: "I like reading, gardening, and people!."
+karma_points: "100"
 
 # neighborhood
 neighbourhood: "De Pijp"
@@ -14,19 +14,19 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Van Woustraat 130, 1073 LT Amsterdam"
-    title: "Can someone walk my dog again?"
-    description: "My 10 month old baby is sick and I need to take care of her. However, my dog Barky really needs to go for a walk. Someone would like to take him for a walk?"
-    category: "Pet sitting"
-    # pictures: "0"
+  - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
+    title: "Anybody needs advice for their garden ?"
+    description: "Hello, I have a special talent with plants and they are my passion, let me knwow if you need help or advice!."
+    category: "Gardening"
+    # pictures: "https://volkstuinverhalen.nl/wp-content/uploads/2017/07/14.jpg"
     compliments:
-  # - address: "Van Woustraat 130, 1073 LT Amsterdam"
-  #   title: "Can someone bring me something from the Supermarket?"
-  #   description: "I know it's late but is someone able to bring me diapers from the Supermarket? My baby is already in bed and I just noticed that I have no more diapers."
-  #   pictures: "0"
-  #   compliments:
-  # - address: "Van Woustraat 130, 1073 LT Amsterdam"
-  #   title: "Is there anyone that can help me with fixing a lamp?"
-  #   description: "Is there someone handy that can help me with this quick fix?"
-  #   pictures: "0"
-  #   compliments:
+    - text: "Super nice! I recommend!"
+
+  - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
+    title: "Can someone pick me up from the Dentist?"
+    description: "Hi, I need to go to the doctor on Monday 09:00 and will have to get anestesia. I'm a bit afraid and was wondering if someone can pick me up from the Dentist office? "
+    category: "Need a ride"
+    pictures: "0"
+    compliments:
+    - text: "Very polite and helpful, thank you!"
+
