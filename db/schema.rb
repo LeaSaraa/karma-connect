@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_06_03_111930) do
 
   # These are extensions that must be enabled in order to support this database
@@ -45,10 +46,9 @@ ActiveRecord::Schema.define(version: 2019_06_03_111930) do
     t.string "text"
     t.integer "points"
     t.bigint "user_id"
-    t.bigint "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_compliments_on_post_id"
+    t.integer "sender_id"
     t.index ["user_id"], name: "index_compliments_on_user_id"
   end
 
@@ -107,8 +107,8 @@ ActiveRecord::Schema.define(version: 2019_06_03_111930) do
   add_foreign_key "chatrooms", "users", column: "sender_id"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "compliments", "posts"
   add_foreign_key "compliments", "users"
+  add_foreign_key "compliments", "users", column: "sender_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "posts", "categories"

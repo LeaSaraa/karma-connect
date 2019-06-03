@@ -1,3 +1,4 @@
+
         <div class="userpage-neighbourhood">
           <%= @user.neighbourhood.name %>
         </div>
@@ -7,7 +8,22 @@
         <div class="userpage-karma-points">
           <%= @user.first_name %> has <%= @user.karma_points %> karma points !
         </div>
+
+        <div class="card-container">
+          <% @user.compliments.each do |compliment| %>
+            <div class="card">
+              <p><%= compliment.text %></p>
+              <p><%= compliment.points %></p>
+              <strong><p><%= compliment.user.first_name %></p></strong>
+            </div>
+          <% end %>
+        </div>
+
         <div class="userpage-links">
-          <a href="#">Send <%= @user.first_name %> a compliment</a>
+          <%= link_to new_user_compliment_path(@user) do %>
+          <div>Send <%= @user.first_name %> a compliment</div>
+          <% end %>
           <a href="#%>">Report this user</a>
         </div>
+
+
