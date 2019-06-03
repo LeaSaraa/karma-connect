@@ -14,17 +14,18 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Van Woustraat 15, 1074 AA Amsterdam"
-    title: "Borrow a ladder"
-    description: "Does someone have a ladder that I can borrow? "
-    pictures: "0"
-    compliments:
-    - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
-      points: "5"
+  # - address: "Van Woustraat 15, 1074 AA Amsterdam"
+  #   title: "Borrow a ladder"
+  #   description: "Does someone have a ladder that I can borrow? "
+  #   pictures: "0"
+  #   compliments:
+  #   - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
+  #     points: "5"
   - address: "Ceintuurbaan 85, 1072 LS, Amsterdam"
-    title: "I am looking for a drilling machine that I can borrow"
-    description: "Can I borrow someones drilling machine upcoming saturday?"
-    pictures: "1"
+    title: "I can give math classes"
+    description: "Hey everyone, I have nothing to do for the next 6 months, I just graduated university, so if your kids need a little help in Maths, I can help!"
+    category: "Lend a hand"
+    # pictures: "1"
     compliments:
     - text: "He was very helpful. He not only borrowed me his drilling machine but also offered the much needed help!"
       points: "5"
