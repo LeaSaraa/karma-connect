@@ -1,20 +1,26 @@
 <div class="footer">
-  <div class="posts-logo">
-    <a href="<%= posts_path %>"><i class="far fa-newspaper"></i></a>
-  </div>
-  <div class="conversations-logo">
-    <a href="#"><i class="far fa-comments"></i></a>
-  </div>
-  <div class="add-post-logo">
-    <%= link_to new_my_post_path do %>
-    <i class="far fa-plus-square"></i>
+  <div>
+    <%= link_to posts_path do %>
+    <%= image_tag "icon.png", class: "posts-logo" %>
     <% end %>
   </div>
-  <div class="user-logo">
+  <div>
+    <%= link_to new_my_post_path do %>
+    <%= image_tag "plus-sign.png", class: "add-post-logo" %>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to chatrooms_path do %>
+    <%= image_tag "talk-bubbles.png", class: "conversations-logo" %>
+    <% end %>
+  </div>
+  <div>
     <% if user_signed_in? %>
-    <a href="<%= user_path(current_user) %>"><i class="far fa-user"></i></a>
+    <%= link_to user_path(current_user) do %>
+    <%= image_tag "male-user-shadow.png", class: "user-logo" %>
+    <% end %>
     <% else %>
-    <a href="#"><i class="far fa-user"></i></a>
+    <a href="#"><%= image_tag "male-user-shadow.png", class: "user-logo" %></a>
     <% end %>
   </div>
 </div>

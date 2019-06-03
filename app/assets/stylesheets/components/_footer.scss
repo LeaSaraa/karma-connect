@@ -3,7 +3,8 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: $orange;
+  background: white;
+  border-top: 2px solid $orange;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -15,17 +16,21 @@
   }
 }
 .posts-logo {
-  font-size: 22px;
+  height: 23px;
+  width: 23px;
 }
 
 .conversations-logo {
-  font-size: 25px;
+  height: 25px;
+  width: 25px;
 }
 
 .add-post-logo {
-  font-size: 24px;
+  height: 24px;
+  width: 24px;
 }
 
 .user-logo {
-  font-size: 22px;
+  height: 24px;
+  width: 24px;
 }
