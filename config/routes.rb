@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-
   resources :posts, only: [:index, :show] do
   resources :comments, only: [ :new, :create, :index ]
   end
@@ -16,10 +15,9 @@ Rails.application.routes.draw do
     end
   end
 
-
  # Serve websocket cable requests in-process
   mount ActionCable.server => '/cable'
 
-  resources :chatrooms
+  resources :chatrooms, only: [:index, :new, :show, :create]
   resources :messages
 end
