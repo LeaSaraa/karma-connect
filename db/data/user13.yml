@@ -1,0 +1,20 @@
+#user
+first_name: "Dennis"
+last_name: "De Jong"
+email: "Mr.DeJong@gmail.com"
+upload_avatar: "http://www.dirkverwoerd-fotoreizen.nl/wordpress/wp-content/uploads/2012/10/DV-Italy-Rieti-portrait-older-man.jpg"
+personal_info: "Not relevant"
+karma_points: "13"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Jozef Israëlskade 27, 1072 LH Amsterdam"
+    title: "Problem with my tablet"
+    description: "I got a tablet from my grand children, but it is very difficult for me to understand everything. Is there someone who wants to come over for a coffee and give me some explanation?"
+    pictures: "0"

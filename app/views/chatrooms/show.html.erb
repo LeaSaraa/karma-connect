@@ -14,7 +14,7 @@
           <% @chatroom.messages.each do |message| %>
           <div class="message-container">
             <div class="avatar-wrapper">
-              <%= image_tag "http://placehold.it/100/100", class: "message-avatar" %>
+              <%= cl_image_tag @user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40,class: "message-avatar" %>
               <p>
                 <%= message.user.first_name %>
               </p>
