@@ -16,8 +16,9 @@ messages: "0"
 posts:
   - address: "Eerste Sweelinckstraat 16HS, 1073 CM Amsterdam"
     title: "Flat tire"
-    description: "Hi, I have a flat tire on my car and wanted to see if someone can borrow me a lug wrench and help me out?"
-    pictures: "https://images-na.ssl-images-amazon.com/images/I/31YlWaQ0MeL._SX466_.jpg"
+    description: "Hi, I have a flat tire on my car and wanted to see if someone can lend me a lug wrench and help me out?"
+    category: "Odd jobs"
+    # pictures: "https://images-na.ssl-images-amazon.com/images/I/31YlWaQ0MeL._SX466_.jpg"
     compliments:
     - text: "He was very helpful. He really made it easier for me."
       points: "4"

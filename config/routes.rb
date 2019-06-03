@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show] do
   resources :comments, only: [ :new, :create, :index ]
   end
-  resources :users, only: [:show, :update, :edit]
+  resources :users, only: [:show, :update, :edit] do
+    resources :compliments, only: [:new, :create, :index]
+  end
   resources :my_posts , only: [:new, :create, :index] do
     member do
       patch :active

@@ -1,8 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :compliments, dependent: :destroy
+  belongs_to :category
   has_many :comments
-
   validates :address, presence: true
 
   mount_uploader :picture, PhotoUploader

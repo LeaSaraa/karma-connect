@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= simple_form_for [@user, @compliment] do |f| %>
+        <%= f.input :text, label: "Compliments" %>
+        <%= f.input :points, collection: (1..5).to_a, as: :radio_buttons, label: "Give a rating" %>
+        <%#= f.input :user, :text, label: "Sender" %>
+        <%= f.submit "Give your compliments" %>
+      <% end %>
+    </div>
+  </div>
+</div>

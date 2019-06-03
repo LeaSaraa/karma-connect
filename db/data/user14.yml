@@ -17,9 +17,11 @@ posts:
   - address: "Jozef Israëlskade 31, 1072 LH Amsterdam"
     title: "Help explaining, mathematics"
     description: "My daughter has a math test on Thursday and I unfortunately do not get it myself. Is there someone who can come over and help explain her a few things?"
-    pictures: "0"
+    category: 'Others'
+    # pictures: "0"
   - address: "Jozef Israëlskade 31, 1072 LH Amsterdam"
     title: "Schoolproject"
     description: "My daughter wants to plant some seeds and grow her own vegetable garden. Does someone has some seeds left?"
-    pictures: "0"
+    category: "Gardening"
+    # pictures: "0"
 

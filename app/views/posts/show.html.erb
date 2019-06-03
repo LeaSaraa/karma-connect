@@ -39,6 +39,7 @@
 
 
         <!-- ------trying map--------- -->
+        <div>
         <div
         id="map" class="info-window post-map"
         style="width: 100%; height: 100px;"
@@ -51,10 +52,12 @@
         <%= simple_form_for @chatroom, url: chatrooms_path do |f| %>
         <%= f.input :receiver_id, input_html: { value: @post.user.id }, as: :hidden  %>
         <%= f.input :topic, input_html: { value: @post.title }, as: :hidden %>
-        <%= f.submit "Start a private conversation", class: "btn-karma" %>
-        <% end %>
       </div>
-
+        <div class="post-creation-buttons">
+        <%= f.submit "Start a private conversation", class: "btn-karma btn-start-conv" %>
+        </div>
+        <% end %>
+</div>
 
           <div class="comment-title">Comments</div>
             <div id="comments">

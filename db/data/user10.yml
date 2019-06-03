@@ -17,12 +17,14 @@ posts:
   - address: "Gerard Doustraat 71, 1072 VM Amsterdam"
     title: "Pick up packages from the post office"
     description: "Hello, I broke my leg and am cannot go outside. I wanted to see if there is someone who can help me with picking up a package from the postoffice and someone to bring me my mail too."
-    pictures: "0"
+    category: 'Need a ride'
+    # pictures: "0"
     compliments:
     - text: "She was very helpful and very nice to know. Anna helped me by getting something from the Ikea the other day and after she dropped it off we had a nice cup of tea together."
       points: "5"
   - address: "Gerard Doustraat 71, 1072 VM Amsterdam"
     title: "Can someone bring a specific plant for me from the home depot?"
     description: "Hello, I do not have a car unfortunately and was wondering if I could join someone who will go to the home depot anytime soon"
-    pictures: "1"
+    category: "Gardening"
+    # pictures: "1"
     compliments:
