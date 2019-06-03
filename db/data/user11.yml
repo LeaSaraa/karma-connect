@@ -1,0 +1,20 @@
+#user
+first_name: "Nienke"
+last_name: "Lindeboom"
+email: "lindeboom_N@gmail.com"
+upload_avatar: "https://www.24baby.nl/wp-content/uploads/2013/03/Jonge-vruchtbare-vrouw-Vruchtbaarheid-vrouw.jpg"
+personal_info: "I am a student in Dutch literature and I can offer help for those who want to learn how to read."
+karma_points: "17"
+
+# neighborhood
+neighbourhood: "De Pijp"
+
+# conversations
+messages: "0"
+
+#posts
+posts:
+  - address: "Tolstraat 91, 1074 VG Amsterdam"
+    title: "Can someone borrow me a dictionary for my exams?"
+    description: "I have an exam tomorrow and I just realized I forgot arrange a dictionary. Someone can borrow me one?"
+    compliments:
