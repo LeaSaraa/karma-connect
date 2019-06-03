@@ -6,7 +6,8 @@ class ComplimentsController < ApplicationController
 
   def create
     @compliment = Compliment.new(compliment_params)
-    @compliment.user = User.find(params[:user_id])
+    # @compliment.user = User.find(params[:user_id])
+    @compliment.user = current_user
     if @compliment.save
       redirect_to user_path(@compliment.user)
     else
