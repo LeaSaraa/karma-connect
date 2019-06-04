@@ -1,16 +1,21 @@
 // .mapboxgl-popup {
 //   // max-width: 200px;
 // }
+#map {
+  margin: 0;
+  padding: 0;
+}
 
 .mapboxgl-popup-content {
-  padding: 0 0 !important;
+  // padding: 0 0 !important;
 }
 
 
 .info-window {
-  margin: 0 0 !important;
-  padding: 0 0 !important;
-  display: flex;
+  // margin: 0 0 !important;
+  // padding: 0 0 !important;
+  // display: flex;
+  // justify-content: end;
   // width: 100%;
 }
 
@@ -34,6 +39,6 @@
 }
 
 #map-view {
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
 }

@@ -1,7 +1,19 @@
-.posts-index {
+.post-card {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.posts-index {
+  // display: flex;
   justify-content: center;
   background-color: white;
+  // margin-right: 0;
+  // margin-left: 0;
+  // padding: 0;
 }
 
 .post-avatar {
@@ -26,7 +38,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 8px;
-  padding-top: 3px;
+  padding-top: 8px;
   width: 100%;
 }
 
@@ -79,14 +91,6 @@
   }
 }
 
-.post-card {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  a:hover {
-    text-decoration: none;
-  }
-}
 
 .post-empty {
   width: 20%;

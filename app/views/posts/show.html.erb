@@ -1,31 +1,20 @@
-  <div class="container">
-    <div class="post-card">
+  <div class="container yellow-background">
+    <div class="white-card">
 
-
-
-
-      <div class="post-card-top">
         <%= link_to user_path(@post.user) do %>
-        <div class="post-avatar">
-          <%= cl_image_tag @post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
-        </div>
+          <div class="post-user">
+            <%= cl_image_tag @post.user.upload_avatar, crop: :thumb, gravity: :face, width: 100, height: 100, class: 'avatar-square' %>
+          </div>
         <% end %>
-        <div class="post-header">
-          <div class="post-title">
-            <%= @post.title %>
-          </div>
-          <div class="post-small">
-            by <%= @post.user.first_name %> <%= @post.user.last_name %>
-          </div>
-        </div>
-      </div>
 
-      <div class="post-card-content">
-        <div class="post-content">
-          <%= @post.description %>
-        </div>
-        <div class="post-small">
-          <% elapsed_time = Time.now - @post.created_at %>
+      <div class="show-post-title">
+          <div class="post-header">
+            <div class="post-title"><h2>
+              <%= @post.title %></h2>
+            </div>
+            <div class="show-post-small">
+              by <%= @post.user.first_name %> <%= @post.user.last_name %> -
+               <% elapsed_time = Time.now - @post.created_at %>
           posted
           <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
           <%= Time.at(elapsed_time).utc.strftime("%e days") %>
@@ -34,7 +23,13 @@
           <% else %>
           <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
           <% end %>
-          - <%= @post.category %> -
+            </div>
+          </div>
+    </div>
+
+      <div class="post-card-content">
+        <div class="post-content">
+          <%= @post.description %>
         </div>
 
 
@@ -52,12 +47,12 @@
         <%= simple_form_for @chatroom, url: chatrooms_path do |f| %>
         <%= f.input :receiver_id, input_html: { value: @post.user.id }, as: :hidden  %>
         <%= f.input :topic, input_html: { value: @post.title }, as: :hidden %>
-      </div>
-        <div class="post-creation-buttons">
+    </div>
+    <div class="post-creation-buttons">
         <%= f.submit "Start a private conversation", class: "btn-karma btn-start-conv" %>
-        </div>
+    </div>
         <% end %>
-</div>
+  </div>
 
           <div class="comment-title">Comments</div>
             <div id="comments">

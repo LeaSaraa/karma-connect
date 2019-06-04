@@ -14,7 +14,7 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Tolstraat 91, 1074 VG Amsterdam"
+  - address: "Stadhouderskade 78, 1072 AE Amsterdam"
     title: "Can someone lend me a dictionary for my exams?"
     description: "I have an exam tomorrow and I just realized I forgot arrange a dictionary. Someone can borrow me one?"
     category: "Others"
