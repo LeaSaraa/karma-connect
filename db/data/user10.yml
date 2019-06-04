@@ -14,7 +14,7 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Pieter Lodewijk Takstraat 33/34, 1073 KJ Amsterdam"
+  - address: "Pieter Lodewijk Takstraat 34, 1073 KJ Amsterdam"
     title: "I can help you with your cooking"
     description: "Hello everyone, just wanted to say that I am offering to help people who don't know how to cook. It's my passion and I have a lot of time on my hand, I would love to share this beautiful art!"
     category: "Gardening"

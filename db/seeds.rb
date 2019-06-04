@@ -86,7 +86,7 @@ puts "CREATING USER"
 	)
 	user.remote_upload_avatar_url = user_data["upload_avatar"]
 	user.save!
-
+p user
 puts "CREATING POSTS"
 	user_data["posts"].each do |post_data|
 	  post = Post.new(
@@ -97,6 +97,7 @@ puts "CREATING POSTS"
 	    user: user,
       category: Category.find_by_name(post_data["category"])
 	    )
+    p post
 		post.save!
 
 		unless post_data["compliments"].nil?
