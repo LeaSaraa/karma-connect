@@ -9,17 +9,15 @@
   </div>
 </div>
 
-
-
-<div class="card-container">
-  <% @user.compliments.each do |compliment| %>
-  <div class="card">
-    <p><%= compliment.text %></p>
-    <p><%= compliment.points %></p>
-    <strong><p><%= compliment.user.first_name %></p></strong>
-  </div>
-  <% end %>
-</div>
+        <div class="card-container">
+          <% @user.compliments.each do |compliment| %>
+            <div class="card">
+              <p>"<%= compliment.text %>"</p>
+              <p><%= compliment.points %> ⭐️⭐️⭐️⭐️⭐️</p>
+              <strong><p><%= compliment.sender.first_name %></p></strong>
+            </div>
+          <% end %>
+        </div>
 
 <div class="userpage-links">
   <%= link_to new_user_compliment_path(@user) do %>
