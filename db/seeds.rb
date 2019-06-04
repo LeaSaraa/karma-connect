@@ -1,4 +1,4 @@
-
+Compliment.destroy_all
 Message.destroy_all
 Chatroom.destroy_all
 Comment.destroy_all
@@ -86,7 +86,7 @@ puts "CREATING USER"
 	)
 	user.remote_upload_avatar_url = user_data["upload_avatar"]
 	user.save!
-
+p user
 puts "CREATING POSTS"
 	user_data["posts"].each do |post_data|
 	  post = Post.new(
@@ -97,6 +97,7 @@ puts "CREATING POSTS"
 	    user: user,
       category: Category.find_by_name(post_data["category"])
 	    )
+    p post
 		post.save!
 
 		unless post_data["compliments"].nil?
@@ -105,8 +106,8 @@ puts "CREATING POSTS"
 			  compliment = Compliment.new(
 				text: compliment_data["text"],
 				points: compliment_data["points"].to_i,
-				user: (User.all.shuffle - [user]).first,
-				post: post
+				user: user,
+				sender: (User.all.shuffle - [user]).first
 				)
 			  	post.remote_picture_url = post_data["picture"]
 				compliment.save!

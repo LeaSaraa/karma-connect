@@ -1,3 +1,4 @@
+
 <div class="userpage-card">
 
   <div class="userpage-personal-info">
@@ -9,7 +10,22 @@
 </div>
 
 
+
+<div class="card-container">
+  <% @user.compliments.each do |compliment| %>
+  <div class="card">
+    <p><%= compliment.text %></p>
+    <p><%= compliment.points %></p>
+    <strong><p><%= compliment.user.first_name %></p></strong>
+  </div>
+  <% end %>
+</div>
+
 <div class="userpage-links">
-  <a href="#" class="btn-homepage">Send <%= @user.first_name %> a compliment</a>
+  <%= link_to new_user_compliment_path(@user) do %>
+  <div> class="btn-homepage">Send <%= @user.first_name %> a compliment</div>
   <a href="#" class="userpage-simple-link">Report this user</a>
 </div>
+
+
+
