@@ -1,21 +1,19 @@
 <div class="footer">
-
   <div>
-
     <%= link_to posts_path, class: "#{'active' if params[:controller] == 'posts'}" do %>
     <%= image_tag "icon.png", class: "posts-logo" %>
-
     <%= link_to "/" do %>
     <%= image_tag "home.png", class: "posts-logo" %>
+    <% end %>
     <% end %>
   </div>
 
   <div>
     <%= link_to new_my_post_path, class: "#{'active' if params[:controller] == 'my_posts'}" do %>
     <%= image_tag "plus-sign.png", class: "add-post-logo" %>
-
     <%= link_to posts_path do %>
     <%= image_tag "icon.png", class: "posts-logo" %>
+    <% end %>
     <% end %>
   </div>
 
@@ -32,7 +30,6 @@
     <% end %>
     <% else %>
     <a href="#"><%= image_tag "male-user-shadow.png", class: "user-logo" %></a>
-    <% end %>
   </div>
-
+  <% end %>
 </div>
