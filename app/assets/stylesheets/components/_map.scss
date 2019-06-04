@@ -33,9 +33,11 @@
 }
 
 .post-map {
-  // margin: 10px 0;
-  // display: flex;
-  // justify-content: center;
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 3px 2px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 #map-view {
