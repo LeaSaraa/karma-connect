@@ -1,13 +1,26 @@
-<div class="userpage-card">
- <div class="userpage-personal-info">
-  "<%= @user.personal_info %>"
-</div>
-<div class="userpage-karma-points">
-  You have <%= @user.karma_points %> karma points !
-</div>
-</div>
-<div class="userpage-links">
-  <a class="btn-homepage" href="<%= new_my_post_path %>">Create a new post</a>
-  <a class="userpage-simple-link" href="<%= my_posts_path %>">Manage my posts</a>
-  <a class="userpage-simple-link" href="<%= user_path(current_user) %>">Edit my profile</a>
+<div class="userpage">
+    <div class="mypage-avatar">
+      <%= cl_image_tag @user.upload_avatar, crop: :thumb, gravity: :face, width: 120, height: 120, class: 'avatar-large' %>
+    </div>
+    <div class="mypage-username">
+      <%= @user.first_name %> <%= @user.last_name %>
+    </div>
+    <div class="mypage-neighbourhood">
+    <%= @user.neighbourhood.name %>
+    </div>
+
+    <div class="userpage-card">
+       <div class="mypage-personal-info">
+        "<%= @user.personal_info %>"
+      </div>
+      <div class="mypage-karma-points">
+        You have <%= @user.karma_points %> karma points !
+      </div>
+      </div>
+      <div class="userpage-links">
+        <a class="btn-homepage" href="<%= new_my_post_path %>">Create a new post</a>
+        <a class="userpage-simple-link" href="<%= my_posts_path %>">Manage my posts</a>
+        <a class="userpage-simple-link" href="<%= user_path(current_user) %>">Edit my profile</a>
+      </div>
+    </div>
 </div>

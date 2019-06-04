@@ -1,38 +1,43 @@
+
+
+
+
 <div class="container">
-  <div class="title">
-    <h4>My posts</h4>
-  </div>
+  <div class="new-post-page">
+    <div class="title">
+      <h4>My posts</h4>
+    </div>
 
 
     <% if current_user.posts.present? %>
-      <% current_user.posts.each do |post| %>
-      <div class="post-card">
-        <div class="my-post-container">
-          <div>
-            <div class="post-title">
-              <%= post.title.truncate_words(4) %>
-            </div>
-            <div class="post-small">
-              <% elapsed_time = Time.now - post.created_at %>
-              <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
-              <%= Time.at(elapsed_time).utc.strftime("%e days") %>
-              <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
-              <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
-              <% else %>
-              <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
-              <% end %>
-            </div>
+    <% current_user.posts.each do |post| %>
+      <div class="new-post-white-card">
+      <div class="my-post-container">
+        <div>
+          <div class="post-title">
+            <%= post.title.truncate_words(4) %>
           </div>
-          <div>
+          <div class="post-small">
+            <% elapsed_time = Time.now - post.created_at %>
+            <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+            <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+            <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+            <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+            <% else %>
+            <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+            <% end %>
+          </div>
+        </div>
+        <div>
 
-<% if post.status == 'Active' %>
+          <% if post.status == 'Active' %>
 
-<!-- Button trigger modal -->
+          <!-- Button trigger modal -->
           <button type="button" class="btn btn-karma" data-toggle="modal" data-target="#Mymodal">
             Active !
           </button>
 
-<!-- .modal -->
+          <!-- .modal -->
           <div class="modal fade" id="Mymodal">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -48,29 +53,30 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">
-                            Close
+                    Close
                   </button>
 <!--                   <button type="button" class="btn btn-primary">
                             Ok
-                  </button> -->
+                          </button> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <% elsif post.status == 'Done' %>
+                  <div class="my-post-done">
+                    <%= post.status %>
+                  </div>
+                  <% end %>
+
+
                 </div>
               </div>
-            </div>
-          </div>
-<% elsif post.status == 'Done' %>
-            <div class="my-post-done">
-            <%= post.status %>
+
+
+
             </div>
             <% end %>
-
-
+            <% end %>
           </div>
         </div>
-
-
-
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+      </div>

@@ -26,7 +26,7 @@
 }
 
 .inbox-content {
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
   background-color: white;
   padding: 10px;
   padding-left: 50px;
@@ -35,7 +35,7 @@
   width: 100%;
 }
 
-.blue-background {
+.inbox-background {
   width: 100%;
   padding-top: 65px;
   background-image: image-url('bg_karma.jpg');
