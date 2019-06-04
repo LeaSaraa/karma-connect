@@ -6,10 +6,10 @@
 }
 
 .inbox-full {
-  width: 100%;
+  width: 95%;
   display: flex;
   height: 150px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .avatar-container {
@@ -32,6 +32,7 @@
   padding-left: 50px;
   box-shadow: 0px 0px 5px rgba(1,1,1,0.3);
   border-radius: 10px;
+  width: 100%;
 }
 
 .blue-background {
@@ -40,4 +41,21 @@
   background-image: image-url('bg_karma.jpg');
   background-size: cover;
   min-height: 100vh;
+}
+
+.title-back {
+  width: 100vw;
+  display: flex;
+  color: darkgrey;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  padding-top: 0;
+  color: black;
+}
+
+.back-link {
+  font-size: 13px;
+  margin-left: 10px;
 }
