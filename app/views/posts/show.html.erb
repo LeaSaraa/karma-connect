@@ -1,71 +1,79 @@
-  <div class="container yellow-background">
+  <div class="container blue-background" style="background-color: <%= @post.category.color %>">
     <div class="white-card">
 
-        <%= link_to user_path(@post.user) do %>
-          <div class="post-user">
-            <%= cl_image_tag @post.user.upload_avatar, crop: :thumb, gravity: :face, width: 100, height: 100, class: 'avatar-square' %>
-          </div>
-        <% end %>
+      <%= link_to user_path(@post.user) do %>
+      <div class="post-user">
+        <%= cl_image_tag @post.user.upload_avatar, crop: :thumb, gravity: :face, width: 100, height: 100, class: 'avatar-square' %>
+      </div>
+      <% end %>
+      <div>
+        <%= image_tag @post.category.icon, class: "post-show-icon" %>
+      </div>
 
-      <div class="show-post-title">
-          <div class="post-header">
-            <div class="post-title"><h2>
-              <%= @post.title %></h2>
-            </div>
-            <div class="show-post-small">
-              by <%= @post.user.first_name %> <%= @post.user.last_name %> -
-               <% elapsed_time = Time.now - @post.created_at %>
-          posted
-          <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
-          <%= Time.at(elapsed_time).utc.strftime("%e days") %>
-          <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
-          <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
-          <% else %>
-          <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+      <div class="show-post-header">
+        <div class="show-post-title">
+          <div class="show-post-h2"><h2>
+            <%= @post.title %></h2>
+          </div>
+          <div class="show-post-small">
+            by <%= @post.user.first_name %> -
+            <% elapsed_time = Time.now - @post.created_at %>
+            posted
+            <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+            <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+            <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+            <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+            <% else %>
+            <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+            <% end %>
+          </div>
+          <div>
+            <%= simple_form_for @chatroom, url: chatrooms_path do |f| %>
+            <%= f.input :receiver_id, input_html: { value: @post.user.id }, as: :hidden  %>
+            <%= f.input :topic, input_html: { value: @post.title }, as: :hidden %>
+          </div>
+          <div>
+            <%= f.submit "Start a private chat", class: "post-conv-button" %>
+          </div>
           <% end %>
-            </div>
-          </div>
-    </div>
+        </div>
+        </div>
+      <div>
 
-      <div class="post-card-content">
-        <div class="post-content">
+      <div class="show-post-content">
+        <div>
           <%= @post.description %>
         </div>
+      </div>
 
 
-        <!-- ------trying map--------- -->
-        <div>
-        <div
-        id="map" class="info-window post-map"
-        style="width: 100%; height: 100px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
 
-        <!-- ----------end of try -->
-      <div>
-        <%= simple_form_for @chatroom, url: chatrooms_path do |f| %>
-        <%= f.input :receiver_id, input_html: { value: @post.user.id }, as: :hidden  %>
-        <%= f.input :topic, input_html: { value: @post.title }, as: :hidden %>
+        <!-- ------map--------- -->
+        <div class="post-map">
+          <div
+          id="map" class="info-window"
+          style="width: 100%; height: 100px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
+        </div>
+
+          <!-- ----------end of map -->
+
+
+        <div class="comment-title">Comments</div>
+          <div id="comments">
+            <% @comments.each do |comment| %>
+            <%= render partial: "posts/comment", locals: { comment: comment } %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="new_comment">
+          <%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
+        </div>
+      </div>
     </div>
-    <div class="post-creation-buttons">
-        <%= f.submit "Start a private conversation", class: "btn-karma btn-start-conv" %>
-    </div>
-        <% end %>
   </div>
 
-          <div class="comment-title">Comments</div>
-            <div id="comments">
-              <% @comments.each do |comment| %>
-                <%= render partial: "posts/comment", locals: { comment: comment } %>
-              <% end %>
-            </div>
-          </div>
 
-         <div class="new_comment">
-            <%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
-          </div>
-    </div>
-
-  </div>
-</div>

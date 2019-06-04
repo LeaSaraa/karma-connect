@@ -6,35 +6,82 @@
   position: relative;
 }
 
-.yellow-background {
-  background-color: #A2ECFF;
+.blue-background {
+  // background-color: #A2ECFF;
+  height: 100vh;
+}
+
+.post-show-icon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
 }
 
 .post-user {
   position: absolute;
     top: -10px;
     left: -10px;
-    // font-size: 18px;
     z-index: 5;
 }
 
-.show-post-title {
+.show-post-header {
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.show-post-title {
   margin-top: 5px;
-  margin-left: 12vh;
+  margin-left: 15vh;
   h2 {
     font-size: 20px;
     margin-bottom: 0;
     padding-bottom: 0;
+    font-weight: 600;
+    color: $normal;
   }
+}
+
+.show-post-h2 {
 }
 
 .show-post-small {
   color: $superlight;
   text-align: left;
   font-size: 14px;
+}
+
+.post-conv-button {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: $orange;
+  border: 1px solid $orange;
+  font-weight: 700;
+  padding: 5px 20px;
+  border-radius: 3px;
+  margin: 0 2px;
+  &:hover {
+    background-color: $orange;
+    color: white;
+    margin: 1px solid $orange;
+  }
+}
+
+.show-post-form-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.show-post-content {
+  color: $normal;
+  padding: 10px 10px;
+  font-size: 16px;
 }
 
 .post-page-content {
@@ -64,7 +111,7 @@ textarea.form-control {
     height: 60px;
 }
 
-.post-creation-buttons {
-  display: flex;
-  justify-content: flex-end;
-}
+// .post-creation-buttons {
+//   display: flex;
+//   justify-content: flex-end;
+// }
