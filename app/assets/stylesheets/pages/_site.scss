@@ -13,7 +13,7 @@ body {
 }
 
 .site-content {
-  // flex: 1;
+  // flex-grow: 1;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -24,7 +24,7 @@ body {
   margin-top: 7vh;
   margin-right: 0;
   margin-left: 0;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
   padding: 0;
 }
 

@@ -1,29 +1,29 @@
 
-        <div class="userpage-neighbourhood">
-          <%= @user.neighbourhood.name %>
-        </div>
-        <div class="userpage-personal-info">
-          "<%= @user.personal_info %>"
-        </div>
-        <div class="userpage-karma-points">
-          <%= @user.first_name %> has <%= @user.karma_points %> karma points !
-        </div>
+<div class="userpage-card">
+
+  <div class="userpage-personal-info">
+    "<%= @user.personal_info %>"
+  </div>
+  <div class="userpage-karma-points">
+    <%= @user.first_name %> has <%= @user.karma_points %> karma points !
+  </div>
+</div>
 
         <div class="card-container">
           <% @user.compliments.each do |compliment| %>
             <div class="card">
-              <p><%= compliment.text %></p>
-              <p><%= compliment.points %></p>
-              <strong><p><%= compliment.user.first_name %></p></strong>
+              <p>"<%= compliment.text %>"</p>
+              <p><%= compliment.points %> ⭐️⭐️⭐️⭐️⭐️</p>
+              <strong><p><%= compliment.sender.first_name %></p></strong>
             </div>
           <% end %>
         </div>
 
-        <div class="userpage-links">
-          <%= link_to new_user_compliment_path(@user) do %>
-          <div>Send <%= @user.first_name %> a compliment</div>
-          <% end %>
-          <a href="#%>">Report this user</a>
-        </div>
+<div class="userpage-links">
+  <%= link_to new_user_compliment_path(@user) do %>
+  <div> class="btn-homepage">Send <%= @user.first_name %> a compliment</div>
+  <a href="#" class="userpage-simple-link">Report this user</a>
+</div>
+
 
 

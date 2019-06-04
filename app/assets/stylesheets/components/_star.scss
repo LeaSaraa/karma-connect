@@ -1,0 +1,74 @@
+div.stars{
+  width: 270px;
+  display: inline-block;
+}
+
+div.stars input{
+  display: none;
+}
+
+div.stars label {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: $normal;
+  transition: all .2s;
+}
+
+div.stars input:checked ~ label:before {
+  content:'\f005';
+  color: #FC9E4F;
+  transition: all .25s;
+}
+
+
+div.stars input.compliment_points_5:checked ~ label:before {
+  color:#FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+div.stars input.compliment_points_1:checked ~ label:before {
+  color: #F62;
+}
+
+div.stars label:hover{
+  transform: rotate(-15deg) scale(1.3);
+}
+
+div.stars label:before{
+  content:'\f006';
+  font-family: FontAwesome;
+}
+
+.rev-box{
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  transition: all .25s;
+}
+
+textarea.review{
+  background: #222;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #EEE;
+}
+
+label.review{
+  display: block;
+  transition:opacity .25s;
+}
+
+input.star:checked ~ .rev-box{
+  height: 125px;
+  overflow: visible;
+}
+
+.compliment {
+  color: $normal;
+  font-weight: bold;
+}

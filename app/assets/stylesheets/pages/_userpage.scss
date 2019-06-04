@@ -2,27 +2,38 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: white;
-  margin: 5px 5px;
-  height: 80vh;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+  background-image: url("bg_karma.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 20px 20px;
 }
 
+.userpage-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  border-radius: 10px;
+
 .userpage-avatar {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 1  0px;
 }
 
 .userpage-username {
   font-size: 30px;
   font-weight: 700;
   color: $normal;
-  margin-bottom: 16px;
+  margin: 10px;
+  // margin-bottom: 16px;
 }
 
 .userpage-neighbourhood {
-  font-size: 17px;
-  color: $superlight;
+  font-size: 20px;
+  color: $normal;
   margin-bottom: 10px;
 }
 
@@ -31,30 +42,40 @@
   color: $superlight;
   font-style: italic;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   padding: 0 12px;
 }
 
 .userpage-karma-points {
   font-size: 20px;
   color: $normal;
-  margin-bottom: 40px;
+  // margin-bottom: 10px;
 }
 
 .userpage-links {
+  margin-top: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 16px;
-  margin: 10px 0;
-  a {
-    line-height: 26px;
+}
+
+.userpage-simple-link {
+  // border: 0.5px solid #EF7E3C;
+  // border-radius: 3px;
+  padding-top: 9px;
+  // padding-bottom: 10px;
+  // padding-right: 10px;
+  // padding-left: 10px;
+  // margin-bottom: 5px;
+  text-decoration: none;
   color: $orange;
   font-weight: 700;
-  }
-  a:hover {
+  // background-color: #EF7E3C;
+  &:hover {
     text-decoration: none;
-    color: $lightorange;
+    opacity: 0.6;
+    color: white;
   }
 }
