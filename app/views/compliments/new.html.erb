@@ -1,12 +1,19 @@
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
 <div class="container">
-  <div class="row">
     <div class="col-xs-4">
+      <div class="compliment">
       <%= simple_form_for [@user, @compliment] do |f| %>
-        <%= f.input :text, label: "Compliments" %>
-        <%= f.input :points, collection: (1..5).to_a, as: :radio_buttons, label: "Give a rating" %>
+        <%= f.input :text, as: :text, label: "Compliments", placeholder: "Boost my karma points" %>
+        <div class="stars">
+          <%= f.collection_radio_buttons :points, [[5], [4], [3], [2], [1]], :first, :last, item_wrapper_tag: false, boolean_style: :inline, class:"star" do |b| %>
+          <%= b.radio_button + b.label {''} %>
+          <% end %>
+        </div>
+        <%#= f.input :points, collection: (1..5).to_a, as: :radio_buttons, label: "Give a rating" %>
         <%#= f.input :user, :text, label: "Sender" %>
-        <%= f.submit "Give your compliments" %>
+        <%= f.submit "Give your compliments", class:"btn btn-outline-warning" %>
       <% end %>
-    </div>
   </div>
+</div>
 </div>
