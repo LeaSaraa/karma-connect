@@ -2,7 +2,7 @@
 first_name: "Leila"
 last_name: "Yavuz"
 email: "leila_yavuz@hotmail.com"
-upload_avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+upload_avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=333&w=500"
 personal_info: "I love to take my dog for walks in the neighborhood."
 karma_points: "60"
 
@@ -26,7 +26,7 @@ posts:
   #   pictures: "0"
   #   compliments:
   - address: "Van Woustraat 130, 1073 LT Amsterdam"
-    title: "Anyone can help me fixing a lamp?"
+    title: "Anyone can help me fix a table?"
     description: "Is there someone handy that can help me with this quick fix?"
     pictures: "0"
     category: "Odd jobs"

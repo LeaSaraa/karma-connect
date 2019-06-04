@@ -1,17 +1,21 @@
 <div class="container">
+<div class="new-post-page">
   <div class="title">
     <h4>New post creation</h4>
   </div>
-    <div class="post-page-content">
-      <%= simple_form_for @post, url: my_posts_path do |f| %>
-      <%= f.input :title, label: false, placeholder: "Post title", class: "post-creation-form" %>
-      <%= f.association :category, label: false, prompt: "- Select a category -" %>
-      <%= f.input :address, label: false, placeholder: "Where ?"%>
-      <%= f.input :description, as: :text, label: 'Your message', placeholder: "Write your post here!" %>
-      <div class="post-creation-buttons">
+  <div class="new-post-white-card">
+<div class="new-post-form">
+    <%= simple_form_for @post, url: my_posts_path do |f| %>
+    <%= f.input :title, label: false, placeholder: "Post title", class: "post-creation-form" %>
+    <%= f.association :category, label: false, prompt: "- Select a category -" %>
+    <%= f.input :address, label: false, placeholder: "Where ?"%>
+    <%= f.input :description, as: :text, label: 'Your message', placeholder: "Write your post here!" %>
+    <div class="post-creation-buttons">
       <%#= f.submit 'Preview',  class: "btn-karma" %>
-      <%= f.button :submit, class: "btn-karma" %>
-      </div>
-      <% end %>
+      <%= f.button :submit, class: "btn-homepage" %>
     </div>
+    <% end %>
+</div>
+  </div>
+</div>
 </div>

@@ -1,18 +1,7 @@
-<div class="container" style="background-image: url("bg_karma.jpg");">
-  <div class="userpage">
-    <div class="userpage-avatar">
-      <%= cl_image_tag @user.upload_avatar, crop: :thumb, gravity: :face, width: 120, height: 120, class: 'avatar-large' %>
-    </div>
-    <div class="userpage-username">
-      <%= @user.first_name %> <%= @user.last_name %>
-    </div>
-      <div class="userpage-neighbourhood">
-    <%= @user.neighbourhood.name %>
-  </div>
+<div class="container">
     <% if @user == current_user %>
     <%= render 'mypage' %>
     <% else %>
     <%= render 'userpage'%>
     <% end %>
-  </div>
 </div>

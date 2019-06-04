@@ -1,0 +1,32 @@
+.mypage-avatar {
+  margin-top: 0px;
+  margin-bottom: 1  0px;
+}
+
+.mypage-username {
+  font-size: 30px;
+  font-weight: 700;
+  color: $normal;
+  margin: 10px;
+}
+
+.mypage-neighbourhood {
+  font-size: 20px;
+  color: $normal;
+  margin-bottom: 10px;
+}
+
+.mypage-personal-info {
+  font-size: 17px;
+  color: $superlight;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 0 12px;
+}
+
+.mypage-karma-points {
+  font-size: 20px;
+  color: $normal;
+  // margin-bottom: 10px;
+}

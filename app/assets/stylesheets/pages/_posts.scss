@@ -44,7 +44,6 @@
 
 .search-bar {
   padding-left: 10px;
-  flex-grow: 3;
 }
 
 .form-control-sm {
@@ -54,6 +53,7 @@
 .search-layout {
   border: 0.5px solid rgba(87,87,87,0.2);
   padding: 5px 5px;
+  width: 95%;
 }
 
 // color of placeholder in seach posts form on posts index page
