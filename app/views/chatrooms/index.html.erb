@@ -1,30 +1,12 @@
-<div class="container">
+<div class="blue-background">
   <div class="title">
-    <h4>My Inbox</h4>
+    <h4>
+      My Inbox
+    </h4>
   </div>
-  <div class="inbox-message">
-    <% @chatrooms.each do |chatroom| %>
-    <%= link_to chatroom_path(chatroom) do %>
-    <% if chatroom.sender == current_user %>
-    <div class="inbox-avatar">
-      <%= cl_image_tag chatroom.receiver.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar" %>
-    </div>
-    <div class="inbox-header">
-      <div class="inbox-title">
-        <h6>
-          <%= chatroom.receiver.first_name %>
-        </h6>
-      </div>
-      <div class="inbox-small">
-        <h5>
-          <%= chatroom.topic %>
-        </h5>
-        <% else %>
-        <%= cl_image_tag chatroom.sender.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: "avatar" %>
-      </div>
-      <% end %>
-      <% end %>
-      <% end %>
-    </div>
-  </div>
+  <% @chatrooms.each do |chatroom| %>
+    <%= link_to chatroom_path(chatroom), class: "inbox-link" do %>
+      <%= render partial: "chatroom_card", locals: { chatroom: chatroom } %>
+    <% end %>
+  <% end %>
 </div>

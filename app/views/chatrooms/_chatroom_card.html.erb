@@ -1,0 +1,15 @@
+<% (chatroom.sender == current_user) ? (avatar = chatroom.receiver.upload_avatar) : (avatar = chatroom.sender.upload_avatar) %>
+
+<div class="inbox-full">
+  <div class="avatar-container">
+    <%= cl_image_tag avatar, crop: :thumb, gravity: :face, width: 70, height: 70, class: "avatar-square" %>
+  </div>
+  <div class="inbox-content">
+    <h4>
+      <%= chatroom.receiver.first_name %>
+    </h4>
+    <strong>
+      <%= chatroom.topic %>
+    </strong>
+  </div>
+</div>
