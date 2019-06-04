@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_06_03_111930) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "category"
     t.string "status", default: "Active"
     t.bigint "category_id"
     t.index ["category_id"], name: "index_posts_on_category_id"
