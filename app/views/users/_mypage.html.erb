@@ -1,14 +1,13 @@
-        <div class="userpage-neighbourhood">
-          <%= @user.neighbourhood.name %>
-        </div>
-         <div class="userpage-personal-info">
-          "<%= @user.personal_info %>"
-        </div>
-        <div class="userpage-karma-points">
-          You have <%= @user.karma_points %> karma points !
-        </div>
-        <div class="userpage-links">
-          <a href="<%= new_my_post_path %>">Create a new post</a>
-          <a href="<%= my_posts_path %>">Manage my posts</a>
-          <a href="<%= user_path(current_user) %>">Edit my profile</a>
-        </div>
+<div class="userpage-card">
+ <div class="userpage-personal-info">
+  "<%= @user.personal_info %>"
+</div>
+<div class="userpage-karma-points">
+  You have <%= @user.karma_points %> karma points !
+</div>
+</div>
+<div class="userpage-links">
+  <a class="btn-homepage" href="<%= new_my_post_path %>">Create a new post</a>
+  <a class="userpage-simple-link" href="<%= my_posts_path %>">Manage my posts</a>
+  <a class="userpage-simple-link" href="<%= user_path(current_user) %>">Edit my profile</a>
+</div>

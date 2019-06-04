@@ -1,13 +1,15 @@
-        <div class="userpage-neighbourhood">
-          <%= @user.neighbourhood.name %>
-        </div>
-        <div class="userpage-personal-info">
-          "<%= @user.personal_info %>"
-        </div>
-        <div class="userpage-karma-points">
-          <%= @user.first_name %> has <%= @user.karma_points %> karma points !
-        </div>
-        <div class="userpage-links">
-          <a href="#">Send <%= @user.first_name %> a compliment</a>
-          <a href="#%>">Report this user</a>
-        </div>
+<div class="userpage-card">
+
+  <div class="userpage-personal-info">
+    "<%= @user.personal_info %>"
+  </div>
+  <div class="userpage-karma-points">
+    <%= @user.first_name %> has <%= @user.karma_points %> karma points !
+  </div>
+</div>
+
+
+<div class="userpage-links">
+  <a href="#" class="btn-homepage">Send <%= @user.first_name %> a compliment</a>
+  <a href="#" class="userpage-simple-link">Report this user</a>
+</div>
