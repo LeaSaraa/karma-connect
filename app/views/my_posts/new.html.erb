@@ -5,7 +5,7 @@
     <div class="post-page-content">
       <%= simple_form_for @post, url: my_posts_path do |f| %>
       <%= f.input :title, label: false, placeholder: "Post title", class: "post-creation-form" %>
-      <%= f.input :category, label: false, collection: ['Gardening','Need a ride', 'Odd jobs', 'Pet sitting', 'Chores', 'Others'], prompt: "- Select a category -" %>
+      <%= f.association :category, label: false, prompt: "- Select a category -" %>
       <%= f.input :address, label: false, placeholder: "Where ?"%>
       <%= f.input :description, as: :text, label: 'Your message', placeholder: "Write your post here!" %>
       <div class="post-creation-buttons">

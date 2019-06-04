@@ -7,7 +7,8 @@ class ChatroomsController < ApplicationController
 
   def index
     @chatroom = Chatroom.new
-    @chatrooms = Chatroom.all
+    # @chatrooms = Chatroom.all
+    @chatrooms = [Chatroom.where(sender_id: current_user.id),Chatroom.where(receiver_id: current_user.id)].flatten
   end
 
   def new

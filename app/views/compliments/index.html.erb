@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="card">
+  <% @compliments.each do |compliment| %>
+  <p><%= compliment.text %></p>
+  <p><%= compliment.points %></p>
+  <p><%= compliment.user.first_name %></p>
+  <% end %>
+  </div>
+</div>

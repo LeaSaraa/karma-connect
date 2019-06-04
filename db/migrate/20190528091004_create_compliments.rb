@@ -4,7 +4,7 @@ class CreateCompliments < ActiveRecord::Migration[5.2]
       t.string :text
       t.integer :points
       t.references :user, foreign_key: true
-      t.references :post, foreign_key: true
+
 
       t.timestamps
     end
