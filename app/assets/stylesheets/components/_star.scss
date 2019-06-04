@@ -11,7 +11,7 @@ div.stars label {
   float: right;
   padding: 10px;
   font-size: 36px;
-  color: #444;
+  color: $normal;
   transition: all .2s;
 }
 
@@ -69,6 +69,6 @@ input.star:checked ~ .rev-box{
 }
 
 .compliment {
-  color: #444;
+  color: $normal;
   font-weight: bold;
 }
