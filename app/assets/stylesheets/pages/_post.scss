@@ -1,3 +1,42 @@
+.white-card {
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 20px;
+  padding: 5px 5px;
+  position: relative;
+}
+
+.yellow-background {
+  background-color: #A2ECFF;
+}
+
+.post-user {
+  position: absolute;
+    top: -10px;
+    left: -10px;
+    // font-size: 18px;
+    z-index: 5;
+}
+
+.show-post-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 12vh;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.show-post-small {
+  color: $superlight;
+  text-align: left;
+  font-size: 14px;
+}
+
 .post-page-content {
   // display: flex;
   // justify-content: center;

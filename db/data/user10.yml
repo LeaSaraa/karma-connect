@@ -14,17 +14,14 @@ messages: "0"
 
 #posts
 posts:
-  - address: "Gerard Doustraat 71, 1072 VM Amsterdam"
-    title: "Pick up packages from the post office"
-    description: "Hello, I broke my leg and am cannot go outside. I wanted to see if there is someone who can help me with picking up a package from the postoffice and someone to bring me my mail too."
-    category: 'Need a ride'
-    # pictures: "0"
+  - address: "Pieter Lodewijk Takstraat 33/34, 1073 KJ Amsterdam"
+    title: "I can help you with your cooking"
+    description: "Hello everyone, just wanted to say that I am offering to help people who don't know how to cook. It's my passion and I have a lot of time on my hand, I would love to share this beautiful art!"
+    category: "Gardening"
     compliments:
     - text: "She was very helpful and very nice to know. Anna helped me by getting something from the Ikea the other day and after she dropped it off we had a nice cup of tea together."
-      points: "5"
-  - address: "Gerard Doustraat 71, 1072 VM Amsterdam"
-    title: "Can someone bring a specific plant for me from the home depot?"
-    description: "Hello, I do not have a car unfortunately and was wondering if I could join someone who will go to the home depot anytime soon"
-    category: "Gardening"
-    # pictures: "1"
-    compliments:
+    # - address: "Ferdinand Bolstraat 333, 1072 LH Amsterdam"
+    # title: "Someone is going to the garden center anytime soon?"
+    # description: "Hallo, I want to get a bigger plan for my balcony and was wondering if someone with a car can help me get one?"
+    # category: "Need a ride"
+    # compliments:
