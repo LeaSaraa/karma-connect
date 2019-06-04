@@ -13,26 +13,29 @@
       <div class="chat-body">
         <div id="messages">
           <% @chatroom.messages.each do |message| %>
-          <div class="message-container">
+            <div class="message-container">
             <% if message.user == current_user %>
             <div class="avatar-wrapper-left">
               <%= cl_image_tag message.user.upload_avatar, crop: :thumb, gravity: :face, class: "message-avatar" %>
               <p>
                 <%= message.user.first_name %>
               </p>
-            </div>
-            <% end %>
-              <div class="message-text-balloon">
+              </div>
+               <div class="message-text-balloon-left">
                 <%= message.content %>
               </div>
+                        <% end %>
               <% if message.user != current_user %>
                 <div class="avatar-wrapper-right">
                   <%= cl_image_tag message.user.upload_avatar, crop: :thumb, gravity: :face, class: "message-avatar" %>
                   <p>
                     <%= message.user.first_name %>
                   </p>
-                </div>
-                <% end %>
+                  </div>
+                  <div class="message-text-balloon-right">
+                <%= message.content %>
+              </div>
+               <% end %>
           </div>
       <% end %>
         </div>

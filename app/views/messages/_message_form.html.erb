@@ -1,6 +1,7 @@
-<%= form_for message, remote: true, authenticity_token: true do |f| %>
-  <%= f.label :your_message %>:
-  <%= f.text_field :content, class: "form-control", data: {textarea: "message"} %>
 
+<div class="chat-footer">
+<%= form_for message, remote: true, authenticity_token: true do |f| %>
+  <%= f.text_field :content, class: "form-control", data: {textarea: "message"} %>
   <%= f.hidden_field :chatroom_id, value: chatroom.id %><%= f.submit "send", class: "btn-karma", data: {send: "message"} %>
 <% end %>
+</div>
