@@ -1,26 +1,33 @@
 <div class="footer">
 
   <div>
+
+    <%= link_to posts_path, class: "#{'active' if params[:controller] == 'posts'}" do %>
+    <%= image_tag "icon.png", class: "posts-logo" %>
+
     <%= link_to "/" do %>
     <%= image_tag "home.png", class: "posts-logo" %>
     <% end %>
   </div>
 
   <div>
+    <%= link_to new_my_post_path, class: "#{'active' if params[:controller] == 'my_posts'}" do %>
+    <%= image_tag "plus-sign.png", class: "add-post-logo" %>
+
     <%= link_to posts_path do %>
     <%= image_tag "icon.png", class: "posts-logo" %>
     <% end %>
   </div>
 
   <div>
-    <%= link_to chatrooms_path do %>
+    <%= link_to chatrooms_path, class: "#{'active' if params[:controller] == 'chatrooms'}" do %>
     <%= image_tag "talk-bubbles.png", class: "conversations-logo" %>
     <% end %>
   </div>
 
   <div>
     <% if user_signed_in? %>
-    <%= link_to user_path(current_user) do %>
+    <%= link_to user_path(current_user), class: "#{'active' if params[:controller] == 'users'}" do %>
     <%= image_tag "male-user-shadow.png", class: "user-logo" %>
     <% end %>
     <% else %>

@@ -1,13 +1,27 @@
 .chat-header {
   width: 100vw;
   display: flex;
+  color: darkgrey;
   align-items: center;
-  padding-top: 25px;
   border-bottom: 1px solid gray;
-  a {
-    font-size: 30px;
-    margin-right: 20px;
+  padding: 20px;
+  padding-top: 0;
+  h1 {
+    font-size: 18px;
+    margin: 0;
     color: black;
+  }
+}
+
+#new_message {
+  padding: 0;
+  border-top: 1px solid #cacaca;
+  margin-bottom: -1px;
+  input[type="submit"] {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    width: 100px;
   }
 }
 
@@ -17,6 +31,9 @@
   align-items: center;
   p {
     margin-top: 10px;
+  }
+  img {
+    object-fit: cover;
   }
 }
 .avatar-wrapper-right {
@@ -50,41 +67,48 @@
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    border: 1.5px solid $orange;;
   }
 
   .message-text-balloon-left {
     margin: 2px 10px;
     background-color: white;
     flex: 1 0 auto;
-    box-shadow: 0px 0px 10px rgba(1,1,1,0.2);
+    box-shadow: 0px 0px 5px rgba(1,1,1,0.2);
     border-radius: 10px;
     padding: 15px;
     width: 80%;
-    height: 50px;
+    min-height: 50px;
     margin: 5px 10px 0;
-    background: #72CB9E;
     border: 3px #FC9E4F;
     order: -1;
+    hyphens: auto;
   }
 
-    .message-text-balloon-right {
+  .message-text-balloon-right {
     margin: 2px 10px;
     background-color: white;
     flex: 1 0 auto;
-    box-shadow: 0px 0px 10px rgba(1,1,1,0.2);
+    box-shadow: 0px 0px 5px rgba(1,1,1,0.2);
     border-radius: 10px;
     padding: 15px;
     width: 80%;
-    height: 40px;
+    min-height: 40px;
     margin: 5px 10px 0;
-    background: #86BBD8;
     border: 3px #FC9E4F;
+    hyphens: auto;
   }
 }
 
 .chat-footer {
-  padding-bottom: 100px;
+  form {
+    display: flex;
+    padding-left: 18px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 52px;
+  }
 }
 
 .form-control {
@@ -94,11 +118,30 @@
   border: 2px solid #eee;
   border-radius: 3px;
   resize: none;
-  padding: 10px;
+  padding: 15px;
   font-size: 18px;
   color: #333;
 }
 
 .form-control:focus {
   background: #fff;
+}
+
+#message_content {
+  border: none;
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.back-link {
+  font-size: 13px;
+  margin-left: 10px;
+  color: gray;
+  text-decoration: underline;
+  margin-right: 20px;
+}
+
+.chat-body {
+  margin-bottom: 100px;
 }

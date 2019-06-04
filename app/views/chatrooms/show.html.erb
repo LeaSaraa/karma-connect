@@ -1,10 +1,10 @@
-
+<div class="blue-background">
 <div class="row col-md-8 col-md-offset-2">
   <div class="chat-wrapper">
     <div class="chat-container">
       <div class="chat-header">
-        <%= link_to chatrooms_path do %>
-        ←
+        <%= link_to chatrooms_path, class: "back-link" do %>
+        < Back
         <% end %>
         <h1>
           <%= @the_other.first_name %>
@@ -24,7 +24,7 @@
                <div class="message-text-balloon-left">
                 <%= message.content %>
               </div>
-                        <% end %>
+              <% end %>
               <% if message.user != current_user %>
                 <div class="avatar-wrapper-right">
                   <%= cl_image_tag message.user.upload_avatar, crop: :thumb, gravity: :face, class: "message-avatar" %>
@@ -40,9 +40,7 @@
       <% end %>
         </div>
       </div>
-      <div class="chat-footer">
         <%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom}%>
-      </div>
     </div>
   </div>
 </div>
