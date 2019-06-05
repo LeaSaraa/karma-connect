@@ -1,14 +1,15 @@
-<div class="blue-background">
-<div class="row col-md-8 col-md-offset-2">
-  <div class="chat-wrapper">
+<!-- <div class="row col-md-8 col-md-offset-2">
+ -->  <div class="chat-background">
     <div class="chat-container">
       <div class="chat-header">
-        <%= link_to chatrooms_path, class: "back-link" do %>
-        < Back
-        <% end %>
-        <h1>
-          <%= @the_other.first_name %>
-        </h1>
+  <div>
+    <%= link_to chatrooms_path, class: "#{'active' if params[:controller] == 'chatrooms'}" do %>
+    <%= image_tag "reply.png", class: "reply-logo" %>
+    <% end %>
+  </div>
+    <h4>
+      Chat with <%= @the_other.first_name %>
+    </h4>
       </div>
       <div class="chat-body">
         <div id="messages">
