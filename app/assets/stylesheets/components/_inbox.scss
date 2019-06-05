@@ -49,7 +49,6 @@
   height: inherit;
   h4 {
     font-size: 16px;
-    font-weight: bold;
     color: black;
   }
   strong {
@@ -70,13 +69,15 @@
   border-bottom: 1px solid rgba(1,1,1,0.1);
   justify-content: flex-start;
   padding: 10px;
-  padding-left: 40px;
+  padding-left: 10px;
   width: 100vw;
   display: flex;
   font-weight: 400;
   color: rgba(87, 87, 87, 0.7);
   font-family: "Raleway", "Helvetica", "sans-serif";
   h4 {
+    padding-left: 100px;
+    font-weight: 700;
     font-size: 20px;
     margin-bottom: 0;
   }
