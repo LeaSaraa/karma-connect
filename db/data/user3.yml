@@ -16,7 +16,7 @@ messages: "0"
 posts:
   - address: "Eerste van der Helststraat 59-61, 1073 AD Amsterdam"
     title: "Anybody needs advice for their garden ?"
-    description: "Hello, I have a special talent with plants and they are my passion, let me knwow if you need help or advice!."
+    description: "Hello, I have a special talent with plants and they are my passion, let me know if you need help or advice!."
     category: "Gardening"
     # pictures: "https://volkstuinverhalen.nl/wp-content/uploads/2017/07/14.jpg"
     compliments:
