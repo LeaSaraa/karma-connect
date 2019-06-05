@@ -2,14 +2,14 @@
 <div class="post-card">
   <div class="info-window">
     <div class="post-card-top">
-      <div class="post-avatar">
-        <%= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40, class: 'avatar-square' %>
-      </div>
+<!--       <div class="post-avatar">
+        <%#= cl_image_tag post.user.upload_avatar, crop: :thumb, gravity: :face, width: 40, height: 40 %>
+      </div> -->
       <div class="post-header">
-        <div class="post-title">
+        <div class="post-title infowindow-title">
           <%= post.title %>
         </div>
-        <div class="post-small">
+        <div class="infowindow-title infowindow-light">
           by <%= post.user.first_name %>
           <% elapsed_time = Time.now - post.created_at %>
           - posted
@@ -25,11 +25,11 @@
       </div>
     </div>
     <div class="post-card-content">
-      <div class="post-content">
-      <%= post.description %>
+      <div class="infowindow-post-content">
+      <%= post.description.truncate_words(20) %>
       </div>
       <div class="post-small">
-       - <%= post.category %> -
+       - <%= post.category.name %> -
       </div>
     </div>
   </div>

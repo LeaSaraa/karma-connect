@@ -41,18 +41,34 @@
           <div class="modal fade" id="Mymodal">
             <div class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="title">
+                <div class="modal-header karma-modal-header">
+                  <div class="modal-title">
+                    <h4>
                     <%= post.title %>
-                  </h4>
+                    </h4>
+                  </div>
                 </div>
-                <div class="modal-body">
+                <div class="modal-creation-date">
+                    <% elapsed_time = Time.now - post.created_at %>
+            You created this post
+            <% if Time.at(elapsed_time).utc.strftime("%e").to_i > 1 %>
+            <%= Time.at(elapsed_time).utc.strftime("%e days") %>
+            <% elsif Time.at(elapsed_time).utc.strftime("%k").to_i > 0 %>
+            <%= Time.at(elapsed_time).utc.strftime("%k h") %> ago
+            <% else %>
+            <%= Time.at(elapsed_time).utc.strftime("%M mn") %> ago
+            <% end %>
+            </div>
+            <div class="modal-description">
+            <%= post.description.truncate_words(8) %>
+            </div>
+                <div class="modal-body karma-modal-body">
                   <div class='btn-karma'>
                     <%= link_to 'Mark as done !', done_my_post_path(post), method: :patch %>
                   </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">
+                <div class="modal-footer karma-modal-footer">
+                  <button type="button" class="btn btn-default karma-modal-dismiss-button" data-dismiss="modal">
                     Close
                   </button>
 <!--                   <button type="button" class="btn btn-primary">

@@ -1,5 +1,13 @@
-<h2>Log in</h2>
 
+<div class="container">
+<div class="new-post-page">
+  <div class="title">
+    <h4>Log in</h4>
+  </div>
+
+
+  <div class="new-post-white-card">
+<div class="new-post-form">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
@@ -13,8 +21,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: "btn-homepage" %>
   </div>
 <% end %>
-
+</div>
+</div>
 <%= render "devise/shared/links" %>
+</div>
+

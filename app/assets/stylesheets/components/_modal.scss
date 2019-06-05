@@ -1,0 +1,49 @@
+.karma-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.modal-title {
+  h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $normal;
+  }
+  display: flex;
+  justify-content: center;
+}
+
+.karma-modal-body {
+  padding: 4rem;
+}
+
+.modal-creation-date {
+  display: flex;
+  justify-content: center;
+  color: $title;
+  // margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $superlight;
+}
+
+.modal-description {
+  color: $normal;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.karma-modal-footer {
+  border-top: none;
+}
+
+.karma-modal-dismiss-button {
+  color: $normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
