@@ -41,17 +41,17 @@
           <div class="modal fade" id="Mymodal">
             <div class="modal-dialog">
               <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header karma-modal-header">
                   <h4 class="title">
                     <%= post.title %>
                   </h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body karma-modal-body">
                   <div class='btn-karma'>
                     <%= link_to 'Mark as done !', done_my_post_path(post), method: :patch %>
                   </div>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer karma-modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">
                     Close
                   </button>

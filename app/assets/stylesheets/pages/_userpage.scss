@@ -56,6 +56,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+    a {
+    text-decoration: none;
+  }
 }
 
 .btn-compliments {
@@ -67,7 +70,6 @@
   font-weight: 700;
   background-color: #EF7E3C;
   &:hover {
-    text-decoration: none;
     opacity: 0.6;
     color: white;
   }
