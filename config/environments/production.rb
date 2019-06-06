@@ -46,7 +46,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   config.action_cable.url = 'wss://www.karmaconnect.live/cable'
   config.web_socket_server_url = 'wss://www.karmaconnect.live/cable'
-  config.action_cable.allowed_request_origins = ['https://www.karmaconnect.live', 'https://karmaconnect.herokuapp.com/']
+  config.action_cable.allowed_request_origins = ['https://www.karmaconnect.live', 'http://karmaconnect.herokuapp.com/']
 
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
