@@ -15,7 +15,7 @@
       <div class="my-post-container">
         <div>
           <div class="post-title">
-            <%= post.title.truncate_words(4) %>
+            <%= post.title.truncate_words(3) %>
           </div>
           <div class="post-small">
             <% elapsed_time = Time.now - post.created_at %>
@@ -34,7 +34,7 @@
 
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-karma" data-toggle="modal" data-target="#Mymodal">
-            Active !
+            Active
           </button>
 
           <!-- .modal -->
