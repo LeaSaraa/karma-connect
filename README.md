@@ -6,9 +6,9 @@ git clone -o karma-connect https://github.com/LeaSaraa/karma-connect.git
 2. Go into the project directory & install packages
 cd karma-connect && bundle install
 
-<img src="/images/Screenshot1.png" width="375" height="667">
-<img src="/images/Screenshot2.png" width="375" height="667">
-<img src="/images/Screenshot3.png" width="375" height="667">
-<img src="/images/Screenshot4.png" width="375" height="667">
-<img src="/images/Screenshot5.png" width="375" height="667">
-<img src="/images/Screenshot6.png" width="375" height="667">
+<img src="/app/images/Screenshot1.png" width="375" height="667">
+<img src="/app/images/Screenshot2.png" width="375" height="667">
+<img src="/app/images/Screenshot3.png" width="375" height="667">
+<img src="/app/images/Screenshot4.png" width="375" height="667">
+<img src="/app/images/Screenshot5.png" width="375" height="667">
+<img src="/app/images/Screenshot6.png" width="375" height="667">
